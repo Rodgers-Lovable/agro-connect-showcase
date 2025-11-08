@@ -1,0 +1,164 @@
+{
+  "products": [
+    {
+      "id": "coffee",
+      "name": "Premium Coffee",
+      "category": "beverages-nuts",
+      "shortDescription": "High-grade Arabica and Robusta beans sourced from premium plantations",
+      "fullDescription": "Our premium coffee beans are carefully selected from the finest plantations, ensuring exceptional quality and rich flavor profiles. Available in various grades and roast levels.",
+      "origin": "East Africa, South America",
+      "packaging": "Bulk bags, custom packaging available",
+      "certifications": ["Organic", "Fair Trade", "Rainforest Alliance"]
+    },
+    {
+      "id": "tea",
+      "name": "Premium Tea",
+      "category": "beverages-nuts",
+      "shortDescription": "Finest black, green, and specialty teas from renowned estates",
+      "fullDescription": "Our tea selection includes premium black tea, green tea, and specialty blends. Each variety is carefully processed to preserve its natural aroma and health benefits.",
+      "origin": "East Africa, Asia",
+      "packaging": "Bulk packaging, retail-ready options",
+      "certifications": ["Organic", "Fair Trade"]
+    },
+    {
+      "id": "macadamia",
+      "name": "Macadamia Nuts",
+      "category": "beverages-nuts",
+      "shortDescription": "Premium quality macadamia nuts, whole and processed",
+      "fullDescription": "Our macadamia nuts are known for their superior quality, rich flavor, and high nutritional value. Available in various sizes and processing levels.",
+      "origin": "Australia, East Africa",
+      "packaging": "Vacuum-sealed bags, bulk containers",
+      "certifications": ["Organic", "Quality Assured"]
+    },
+    {
+      "id": "avocado",
+      "name": "Fresh Avocados",
+      "category": "beverages-nuts",
+      "shortDescription": "Premium Hass and Fuerte avocados for export markets",
+      "fullDescription": "High-quality fresh avocados, carefully harvested and packed to maintain freshness during transit. Ideal for international markets.",
+      "origin": "East Africa, Australia",
+      "packaging": "Cartons with moisture control",
+      "certifications": ["GlobalGAP", "Organic"]
+    },
+    {
+      "id": "banana",
+      "name": "Export Bananas",
+      "category": "beverages-nuts",
+      "shortDescription": "Premium quality Cavendish bananas",
+      "fullDescription": "Fresh, premium-grade bananas harvested at optimal maturity for long-distance shipping. Consistent quality and size.",
+      "origin": "East Africa, Southeast Asia",
+      "packaging": "Cartons, temperature-controlled",
+      "certifications": ["GlobalGAP", "Organic"]
+    },
+    {
+      "id": "sesame",
+      "name": "Sesame Seeds",
+      "category": "oilseeds-grains",
+      "shortDescription": "White and black sesame seeds, premium grade",
+      "fullDescription": "High-quality sesame seeds with excellent oil content and purity. Available in white, black, and natural varieties.",
+      "origin": "East Africa, India",
+      "packaging": "50kg bags, bulk shipments",
+      "certifications": ["Organic", "Quality Tested"]
+    },
+    {
+      "id": "sunflower",
+      "name": "Sunflower Seeds",
+      "category": "oilseeds-grains",
+      "shortDescription": "Premium sunflower seeds for oil extraction and consumption",
+      "fullDescription": "High-oil content sunflower seeds, perfect for oil production or direct consumption. Consistently high quality.",
+      "origin": "Eastern Europe, East Africa",
+      "packaging": "Bulk bags, containers",
+      "certifications": ["Non-GMO", "Quality Certified"]
+    },
+    {
+      "id": "chia",
+      "name": "Chia Seeds",
+      "category": "oilseeds-grains",
+      "shortDescription": "Organic chia seeds rich in omega-3 fatty acids",
+      "fullDescription": "Premium organic chia seeds packed with nutrients, omega-3 fatty acids, and fiber. Perfect for health-conscious markets.",
+      "origin": "South America, Australia",
+      "packaging": "Sealed bags, bulk options",
+      "certifications": ["Organic", "Non-GMO"]
+    },
+    {
+      "id": "cinnamon",
+      "name": "Ceylon Cinnamon",
+      "category": "spices",
+      "shortDescription": "True Ceylon cinnamon sticks and powder",
+      "fullDescription": "Authentic Ceylon cinnamon known for its delicate flavor and aroma. Available in sticks, powder, or custom processing.",
+      "origin": "Sri Lanka, Madagascar",
+      "packaging": "Sealed containers, bulk bags",
+      "certifications": ["Organic", "Quality Assured"]
+    },
+    {
+      "id": "pepper-black",
+      "name": "Black Pepper",
+      "category": "spices",
+      "shortDescription": "Premium whole and ground black pepper",
+      "fullDescription": "High-quality black pepper with strong aroma and pungency. Available whole or ground to specification.",
+      "origin": "India, Vietnam",
+      "packaging": "Bulk bags, retail packaging",
+      "certifications": ["Organic", "Quality Tested"]
+    },
+    {
+      "id": "pepper-white",
+      "name": "White Pepper",
+      "category": "spices",
+      "shortDescription": "Premium white pepper for refined cuisines",
+      "fullDescription": "Finest white pepper with a milder, more complex flavor profile. Ideal for light-colored dishes and refined cooking.",
+      "origin": "India, Indonesia",
+      "packaging": "Sealed bags, bulk containers",
+      "certifications": ["Quality Certified"]
+    },
+    {
+      "id": "chillies",
+      "name": "Dried Chillies",
+      "category": "spices",
+      "shortDescription": "Various dried chilli varieties for global markets",
+      "fullDescription": "A range of dried chillies from mild to extremely hot. Carefully dried and sorted for consistent quality.",
+      "origin": "East Africa, India",
+      "packaging": "Bulk bags, custom packaging",
+      "certifications": ["Organic", "Quality Assured"]
+    },
+    {
+      "id": "cardamom",
+      "name": "Green Cardamom",
+      "category": "spices",
+      "shortDescription": "Premium green cardamom pods",
+      "fullDescription": "High-grade green cardamom with intense aroma and flavor. One of the world's most expensive spices.",
+      "origin": "India, Guatemala",
+      "packaging": "Sealed containers, premium packaging",
+      "certifications": ["Organic", "Premium Grade"]
+    },
+    {
+      "id": "turmeric",
+      "name": "Turmeric",
+      "category": "spices",
+      "shortDescription": "Organic turmeric root and powder",
+      "fullDescription": "High-curcumin content turmeric, prized for its health benefits and vibrant color. Available as whole roots or powder.",
+      "origin": "India, Southeast Asia",
+      "packaging": "Bulk bags, retail-ready",
+      "certifications": ["Organic", "Quality Tested"]
+    },
+    {
+      "id": "vanilla",
+      "name": "Vanilla Beans",
+      "category": "spices",
+      "shortDescription": "Premium bourbon vanilla beans",
+      "fullDescription": "Finest quality vanilla beans with rich, complex flavor profiles. Carefully cured for maximum flavor development.",
+      "origin": "Madagascar, Tahiti",
+      "packaging": "Vacuum-sealed, temperature-controlled",
+      "certifications": ["Organic", "Premium Grade"]
+    },
+    {
+      "id": "cloves",
+      "name": "Whole Cloves",
+      "category": "spices",
+      "shortDescription": "Premium whole cloves with intense aroma",
+      "fullDescription": "High-quality whole cloves with strong aromatic properties. Essential for spice blends and culinary applications.",
+      "origin": "Madagascar, Indonesia",
+      "packaging": "Sealed bags, bulk containers",
+      "certifications": ["Organic", "Quality Assured"]
+    }
+  ]
+}

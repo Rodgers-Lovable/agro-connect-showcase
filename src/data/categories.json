@@ -1,0 +1,22 @@
+{
+  "categories": [
+    {
+      "id": "beverages-nuts",
+      "name": "Beverages & Nuts",
+      "description": "Premium coffee, tea, macadamia nuts, avocados, and bananas",
+      "icon": "Coffee"
+    },
+    {
+      "id": "oilseeds-grains",
+      "name": "Oilseeds & Grains",
+      "description": "High-quality sesame, sunflower, and chia seeds",
+      "icon": "Wheat"
+    },
+    {
+      "id": "spices",
+      "name": "Spices",
+      "description": "Authentic cinnamon, pepper, chillies, cardamom, turmeric, vanilla, and cloves",
+      "icon": "Flame"
+    }
+  ]
+}

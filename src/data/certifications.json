@@ -1,0 +1,55 @@
+{
+  "certifications": [
+    {
+      "id": "organic",
+      "name": "Organic Certification",
+      "description": "Products certified according to international organic standards",
+      "icon": "Leaf"
+    },
+    {
+      "id": "fair-trade",
+      "name": "Fair Trade Certified",
+      "description": "Supporting ethical trading practices and fair farmer compensation",
+      "icon": "Handshake"
+    },
+    {
+      "id": "quality",
+      "name": "Quality Assurance",
+      "description": "Rigorous quality control and testing procedures",
+      "icon": "Award"
+    },
+    {
+      "id": "global-gap",
+      "name": "GlobalGAP Certified",
+      "description": "Good Agricultural Practices certification for safe, sustainable production",
+      "icon": "Globe"
+    }
+  ],
+  "qualityProcess": [
+    {
+      "step": "1",
+      "title": "Source Selection",
+      "description": "Carefully selecting premium suppliers with proven track records"
+    },
+    {
+      "step": "2",
+      "title": "Quality Testing",
+      "description": "Comprehensive laboratory testing and quality verification"
+    },
+    {
+      "step": "3",
+      "title": "Processing Standards",
+      "description": "Following strict processing and hygiene protocols"
+    },
+    {
+      "step": "4",
+      "title": "Secure Packaging",
+      "description": "Professional packaging to maintain product integrity during transit"
+    },
+    {
+      "step": "5",
+      "title": "Export Compliance",
+      "description": "Meeting all international export regulations and documentation"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "company": {
+    "name": "AgroInternational Pty Ltd",
+    "abn": "68 690 896 532",
+    "ceo": "Abdallah Ndwala",
+    "address": {
+      "street": "299/6 Melody Court",
+      "city": "Warana",
+      "state": "QLD",
+      "postcode": "4575",
+      "country": "Australia",
+      "full": "299/6 Melody Court, Warana QLD 4575 Australia"
+    },
+    "contact": {
+      "phone": "+61 477 444 754",
+      "email": "info@agrointernational.com.au",
+      "website": "www.agrointernational.com.au"
+    },
+    "mission": "To provide premium quality agro-products to global markets while supporting sustainable farming practices and fair trade principles.",
+    "vision": "To be the leading trusted partner for premium agro-products, connecting the world's finest producers with discerning buyers.",
+    "values": [
+      {
+        "title": "Quality Excellence",
+        "description": "We maintain the highest standards in product selection, processing, and delivery."
+      },
+      {
+        "title": "Sustainability",
+        "description": "We promote sustainable farming practices that protect our planet for future generations."
+      },
+      {
+        "title": "Fair Trade",
+        "description": "We ensure fair compensation for farmers and support local communities."
+      },
+      {
+        "title": "Customer Partnership",
+        "description": "We build long-term relationships based on trust, reliability, and mutual success."
+      }
+    ],
+    "history": "Founded with a vision to bridge the gap between premium agro-product producers and global markets, AgroInternational Pty Ltd has grown to become a trusted name in agricultural exports. Our commitment to quality, sustainability, and fair trade practices has made us the preferred partner for buyers and distributors worldwide."
+  }
+}
