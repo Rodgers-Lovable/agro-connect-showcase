@@ -116,7 +116,7 @@ const About = () => {
       </section>
 
       {/* Mission, Vision, Values */}
-      <section className="py-20 bg-gradient-to-br from-muted/30 via-background to-muted/20">
+      <section className="py-20 bg-white from-muted/30 via-background to-muted/20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="font-montserrat font-bold text-4xl md:text-5xl text-primary mb-4">
@@ -222,7 +222,7 @@ const About = () => {
       </section>
 
       {/* Leadership Section */}
-      <section className="py-20 bg-gradient-to-b from-muted/20 to-background">
+      <section className="py-20 bg-white from-muted/20 to-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="font-montserrat font-bold text-4xl md:text-5xl text-primary mb-4">
