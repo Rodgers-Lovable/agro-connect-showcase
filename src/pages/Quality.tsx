@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
+import FarmToExportJourney from "@/components/FarmToExportJourney";
 import certificationsData from "@/data/certifications.json";
 import traceabilityData from "@/data/traceability.json";
 import sustainablePracticesData from "@/data/sustainable-practices.json";
@@ -178,7 +179,7 @@ const Quality = () => {
         </div>
       </section>
 
-      {/* Product Traceability Section */}
+      {/* Interactive Farm-to-Export Journey */}
       <section className="py-20 bg-primary text-primary-foreground relative overflow-hidden">
         <div
           className="absolute inset-0 opacity-10 bg-cover bg-center"
@@ -188,42 +189,15 @@ const Quality = () => {
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
             <h2 className="font-montserrat font-bold text-4xl md:text-5xl mb-4">
-              From Farm to Export — <span className="text-accent">Complete Traceability</span>
+              From Farm to Export — <span className="text-accent">Live Tracking Journey</span>
             </h2>
             <p className="font-lato text-xl text-primary-foreground/90 max-w-3xl mx-auto">
-              Full transparency at every stage, ensuring product integrity from sourcing to shipment
+              Watch the complete journey in real-time — full transparency from sourcing to shipment
             </p>
           </div>
 
           <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {traceabilitySteps.map((step, index) => {
-                const Icon = iconMap[step.icon as keyof typeof iconMap];
-                return (
-                  <div 
-                    key={step.id}
-                    className="relative group"
-                    style={{ animationDelay: `${index * 100}ms` }}
-                  >
-                    <div className="p-6 rounded-lg bg-white/10 backdrop-blur-sm border border-primary-foreground/20 hover:bg-white/20 hover:border-accent/50 transition-all duration-300 h-full">
-                      <div className="flex items-start gap-4">
-                        <div className="flex-shrink-0 w-12 h-12 bg-accent rounded-lg flex items-center justify-center">
-                          <Icon className="h-6 w-6 text-accent-foreground" />
-                        </div>
-                        <div>
-                          <h3 className="font-montserrat font-semibold text-lg mb-2">
-                            {step.title}
-                          </h3>
-                          <p className="font-lato text-sm text-primary-foreground/80">
-                            {step.description}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
+            <FarmToExportJourney />
           </div>
         </div>
       </section>
