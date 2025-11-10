@@ -89,7 +89,7 @@ const Home = () => {
                 View Products <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="text-lg px-8 bg-background/90 hover:bg-background border-2">
+            <Button asChild size="lg" variant="outline" className="text-lg px-8 bg-background/90 text-black hover:bg-background border-2">
               <Link to="/contact">Request Quote</Link>
             </Button>
           </div>
@@ -187,7 +187,7 @@ const Home = () => {
                   className="flex-1 min-w-[250px] max-w-[280px] group"
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
-                  <div className="h-full p-6 rounded-lg bg-background/60 backdrop-blur-sm border border-border/50 hover:border-accent/50 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                  <div className="h-full p-6 rounded-lg bg-white backdrop-blur-sm border border-border/50 hover:border-accent/50 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                     <div className="flex items-start gap-4">
                       <div className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-accent/20 to-accent/5 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
                         <IconComponent className="h-7 w-7 text-accent" />
@@ -210,7 +210,7 @@ const Home = () => {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-20 bg-background relative overflow-hidden">
+      <section className="py-20 bg-background relative overflow-hidden bg-white">
         <div
           className="absolute inset-0 opacity-[0.03] bg-cover bg-center"
           style={{ backgroundImage: `url(${logisticsImage})` }}
@@ -281,7 +281,7 @@ const Home = () => {
                 style={{ animationDelay: `${index * 150}ms` }}
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-primary/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <div className="relative p-8 rounded-xl bg-background/80 backdrop-blur-sm border border-border/50 hover:border-accent/30 transition-all duration-300 h-full">
+                <div className="relative p-8 rounded-xl bg-white backdrop-blur-sm border border-border/50 hover:border-accent/30 transition-all duration-300 h-full">
                   <div className="mb-6">
                     <svg className="w-10 h-10 text-accent/40" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
@@ -329,7 +329,7 @@ const Home = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="font-montserrat font-bold text-4xl md:text-5xl text-primary mb-4">

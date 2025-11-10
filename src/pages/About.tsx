@@ -309,7 +309,7 @@ const About = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <div className="p-6 rounded-lg bg-background/80 backdrop-blur-sm border border-border/50">
+            <div className="p-6 rounded-lg bg-background/80 backdrop-blur-sm border border-border/50 bg-white">
               <Leaf className="h-12 w-12 text-accent mb-4" />
               <h3 className="font-montserrat font-semibold text-xl text-primary mb-3">
                 Eco-Friendly Farming
@@ -320,7 +320,7 @@ const About = () => {
               </p>
             </div>
 
-            <div className="p-6 rounded-lg bg-background/80 backdrop-blur-sm border border-border/50">
+            <div className="p-6 rounded-lg bg-background/80 backdrop-blur-sm border border-border/50 bg-white">
               <Handshake className="h-12 w-12 text-accent mb-4" />
               <h3 className="font-montserrat font-semibold text-xl text-primary mb-3">
                 Farmer Empowerment
@@ -331,7 +331,7 @@ const About = () => {
               </p>
             </div>
 
-            <div className="p-6 rounded-lg bg-background/80 backdrop-blur-sm border border-border/50">
+            <div className="p-6 rounded-lg bg-background/80 backdrop-blur-sm border border-border/50 bg-white">
               <Award className="h-12 w-12 text-accent mb-4" />
               <h3 className="font-montserrat font-semibold text-xl text-primary mb-3">
                 Certified Excellence
