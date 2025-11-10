@@ -46,7 +46,7 @@ const Products = () => {
       </section>
 
       {/* Category Filter */}
-      <section className="py-8 bg-background border-b border-border sticky top-20 z-40 backdrop-blur-sm bg-background/95">
+      <section className="py-8 border-b border-border sticky top-20 z-40 backdrop-blur-sm bg-background/55">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap gap-4 justify-center">
             <Button
@@ -61,7 +61,7 @@ const Products = () => {
                 key={category.id}
                 variant={selectedCategory === category.id ? "default" : "outline"}
                 onClick={() => setSelectedCategory(category.id)}
-                className={selectedCategory === category.id ? "bg-accent text-accent-foreground" : ""}
+                className={selectedCategory === category.id ? "bg-accent text-black hover:text-white" : ""}
               >
                 {category.name}
               </Button>
