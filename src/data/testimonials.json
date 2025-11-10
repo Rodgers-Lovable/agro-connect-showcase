@@ -1,0 +1,25 @@
+{
+  "testimonials": [
+    {
+      "id": 1,
+      "quote": "The consistency and quality from AgroInternational are unmatched.",
+      "author": "Daniel L.",
+      "role": "Importer",
+      "location": "Singapore"
+    },
+    {
+      "id": 2,
+      "quote": "Excellent communication and product reliability. Highly recommended.",
+      "author": "Aisha R.",
+      "role": "Distributor",
+      "location": "UAE"
+    },
+    {
+      "id": 3,
+      "quote": "A trusted partner for premium agro-products. Professional service every time.",
+      "author": "Michael T.",
+      "role": "Wholesaler",
+      "location": "United Kingdom"
+    }
+  ]
+}

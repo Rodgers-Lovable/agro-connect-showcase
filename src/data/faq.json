@@ -1,0 +1,29 @@
+{
+  "faq": [
+    {
+      "id": 1,
+      "question": "What agro-products do you export?",
+      "answer": "We specialize in coffee, tea, macadamia, avocado, sesame seeds, sunflower seeds, chia seeds, and a wide range of premium spices including cinnamon, pepper varieties, cardamom, turmeric, vanilla, cloves, and nutmeg."
+    },
+    {
+      "id": 2,
+      "question": "Do you handle international shipping?",
+      "answer": "Yes, we coordinate export logistics for timely and safe delivery worldwide. Our experienced team manages all aspects of international shipping to ensure your products arrive in perfect condition."
+    },
+    {
+      "id": 3,
+      "question": "Can I request product samples?",
+      "answer": "Absolutely — contact us to arrange samples for bulk evaluation. We're happy to provide samples so you can assess our product quality before placing larger orders."
+    },
+    {
+      "id": 4,
+      "question": "What certifications do your products meet?",
+      "answer": "Our products comply with international standards including Organic, Fairtrade, and HACCP certifications. We maintain rigorous quality control processes to ensure all products meet global export requirements."
+    },
+    {
+      "id": 5,
+      "question": "What is your minimum order quantity?",
+      "answer": "Minimum order quantities vary by product. Contact our team to discuss your specific requirements and we'll work with you to find the best solution for your business needs."
+    }
+  ]
+}

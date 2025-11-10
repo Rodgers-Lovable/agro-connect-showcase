@@ -1,0 +1,28 @@
+{
+  "features": [
+    {
+      "id": 1,
+      "icon": "Globe",
+      "title": "Global Export Expertise",
+      "description": "Supplying premium agro-products to 15+ countries worldwide."
+    },
+    {
+      "id": 2,
+      "icon": "Leaf",
+      "title": "Sustainably Sourced",
+      "description": "Partnering with ethical and eco-friendly farms."
+    },
+    {
+      "id": 3,
+      "icon": "Shield",
+      "title": "Quality Assured",
+      "description": "Rigorous inspection and international certifications."
+    },
+    {
+      "id": 4,
+      "icon": "Truck",
+      "title": "Reliable Logistics",
+      "description": "Timely delivery through trusted global networks."
+    }
+  ]
+}
