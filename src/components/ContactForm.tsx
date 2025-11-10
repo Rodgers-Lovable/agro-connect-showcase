@@ -1,10 +1,12 @@
-import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
+import emailjs from "@emailjs/browser";
 
 const contactSchema = z.object({
   name: z.string().trim().min(1, "Name is required").max(100, "Name must be less than 100 characters"),
@@ -14,108 +16,102 @@ const contactSchema = z.object({
   message: z.string().trim().min(10, "Message must be at least 10 characters").max(1000, "Message must be less than 1000 characters"),
 });
 
+type ContactFormData = z.infer<typeof contactSchema>;
+
 const ContactForm = () => {
   const { toast } = useToast();
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    company: "",
-    phone: "",
-    message: "",
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors, isSubmitting },
+  } = useForm<ContactFormData>({
+    resolver: zodResolver(contactSchema),
+    defaultValues: {
+      name: "",
+      email: "",
+      company: "",
+      phone: "",
+      message: "",
+    },
   });
-  const [errors, setErrors] = useState<Record<string, string>>({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-    // Clear error when user starts typing
-    if (errors[name]) {
-      setErrors((prev) => ({ ...prev, [name]: "" }));
-    }
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setErrors({});
-
+  const onSubmit = async (data: ContactFormData) => {
     try {
-      // Validate form data
-      contactSchema.parse(formData);
+      // EmailJS configuration - Replace these with your actual EmailJS credentials
+      // To set up EmailJS:
+      // 1. Sign up at https://www.emailjs.com/
+      // 2. Create an email service
+      // 3. Create an email template
+      // 4. Replace the IDs below with your actual IDs from EmailJS dashboard
+      
+      const EMAILJS_SERVICE_ID = "your_service_id";
+      const EMAILJS_TEMPLATE_ID = "your_template_id";
+      const EMAILJS_PUBLIC_KEY = "your_public_key";
 
-      // Here you would normally send the data to your backend
-      // For now, we'll just show a success message
+      // Uncomment and configure when ready to use EmailJS
+      /*
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        {
+          from_name: data.name,
+          from_email: data.email,
+          company: data.company || "N/A",
+          phone: data.phone || "N/A",
+          message: data.message,
+        },
+        EMAILJS_PUBLIC_KEY
+      );
+      */
+
       toast({
         title: "Message Sent!",
         description: "Thank you for your inquiry. We'll get back to you soon.",
       });
 
-      // Reset form
-      setFormData({
-        name: "",
-        email: "",
-        company: "",
-        phone: "",
-        message: "",
-      });
+      reset();
     } catch (error) {
-      if (error instanceof z.ZodError) {
-        const fieldErrors: Record<string, string> = {};
-        error.errors.forEach((err) => {
-          if (err.path[0]) {
-            fieldErrors[err.path[0] as string] = err.message;
-          }
-        });
-        setErrors(fieldErrors);
-        toast({
-          title: "Validation Error",
-          description: "Please check the form for errors.",
-          variant: "destructive",
-        });
-      }
-    } finally {
-      setIsSubmitting(false);
+      console.error("Email sending error:", error);
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again later.",
+        variant: "destructive",
+      });
     }
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
+    <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="space-y-2">
           <Label htmlFor="name">Name *</Label>
           <Input
             id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
+            {...register("name")}
             placeholder="Your full name"
             className={errors.name ? "border-destructive" : ""}
           />
-          {errors.name && <p className="text-sm text-destructive">{errors.name}</p>}
+          {errors.name && <p className="text-sm text-destructive">{errors.name.message}</p>}
         </div>
 
         <div className="space-y-2">
           <Label htmlFor="email">Email *</Label>
           <Input
             id="email"
-            name="email"
             type="email"
-            value={formData.email}
-            onChange={handleChange}
+            {...register("email")}
             placeholder="your@email.com"
             className={errors.email ? "border-destructive" : ""}
           />
-          {errors.email && <p className="text-sm text-destructive">{errors.email}</p>}
+          {errors.email && <p className="text-sm text-destructive">{errors.email.message}</p>}
         </div>
 
         <div className="space-y-2">
           <Label htmlFor="company">Company</Label>
           <Input
             id="company"
-            name="company"
-            value={formData.company}
-            onChange={handleChange}
+            {...register("company")}
             placeholder="Your company name"
           />
         </div>
@@ -124,10 +120,8 @@ const ContactForm = () => {
           <Label htmlFor="phone">Phone</Label>
           <Input
             id="phone"
-            name="phone"
             type="tel"
-            value={formData.phone}
-            onChange={handleChange}
+            {...register("phone")}
             placeholder="+1 234 567 8900"
           />
         </div>
@@ -137,14 +131,12 @@ const ContactForm = () => {
         <Label htmlFor="message">Message *</Label>
         <Textarea
           id="message"
-          name="message"
-          value={formData.message}
-          onChange={handleChange}
+          {...register("message")}
           placeholder="Tell us about your requirements..."
           rows={6}
           className={errors.message ? "border-destructive" : ""}
         />
-        {errors.message && <p className="text-sm text-destructive">{errors.message}</p>}
+        {errors.message && <p className="text-sm text-destructive">{errors.message.message}</p>}
       </div>
 
       <Button

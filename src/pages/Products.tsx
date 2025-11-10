@@ -3,6 +3,7 @@ import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
 import ProductCard from "@/components/ProductCard";
 import { Button } from "@/components/ui/button";
+import { Helmet } from "react-helmet";
 import productsData from "@/data/products.json";
 import categoriesData from "@/data/categories.json";
 
@@ -17,7 +18,18 @@ const Products = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Navigation />
+      <Helmet>
+        <title>Premium Agro-Products - AgroInternational | Coffee, Tea, Spices</title>
+        <meta 
+          name="description" 
+          content="Browse AgroInternational's complete range of premium agro-products: coffee, tea, macadamia nuts, avocados, sesame seeds, spices, and more. Organic and Fair Trade certified products." 
+        />
+        <meta 
+          name="keywords" 
+          content="premium coffee export, organic tea supplier, macadamia nuts exporter, spices export, sesame seeds, vanilla beans, turmeric, cinnamon" 
+        />
+        <link rel="canonical" href="https://www.agrointernational.com.au/products" />
+      </Helmet>
       
       {/* Hero Section */}
       <section className="py-20 bg-gradient-primary text-primary-foreground">

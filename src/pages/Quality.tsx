@@ -2,6 +2,7 @@ import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Leaf, Handshake, Award, Globe } from "lucide-react";
+import { Helmet } from "react-helmet";
 import certificationsData from "@/data/certifications.json";
 
 const Quality = () => {
@@ -16,7 +17,18 @@ const Quality = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Navigation />
+      <Helmet>
+        <title>Quality & Standards - AgroInternational | Certifications</title>
+        <meta 
+          name="description" 
+          content="AgroInternational's quality certifications include Organic, Fair Trade, GlobalGAP, and Rainforest Alliance. Learn about our rigorous quality assurance process and commitment to excellence." 
+        />
+        <meta 
+          name="keywords" 
+          content="organic certified exporter, fair trade products, GlobalGAP certification, quality agro products, agricultural standards" 
+        />
+        <link rel="canonical" href="https://www.agrointernational.com.au/quality" />
+      </Helmet>
       
       {/* Hero Section */}
       <section className="py-20 bg-gradient-primary text-primary-foreground">

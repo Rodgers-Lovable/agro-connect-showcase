@@ -3,6 +3,7 @@ import Footer from "@/components/layout/Footer";
 import ContactForm from "@/components/ContactForm";
 import { Card, CardContent } from "@/components/ui/card";
 import { Mail, Phone, MapPin } from "lucide-react";
+import { Helmet } from "react-helmet";
 import companyData from "@/data/company.json";
 
 const Contact = () => {
@@ -10,7 +11,18 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <Navigation />
+      <Helmet>
+        <title>Contact Us - AgroInternational | Get in Touch</title>
+        <meta 
+          name="description" 
+          content="Contact AgroInternational Pty Ltd for premium agro-products export inquiries. Email, phone, and office address in Australia. Business hours Monday-Friday 9AM-5PM AEST." 
+        />
+        <meta 
+          name="keywords" 
+          content="contact agro exporter, AgroInternational contact, agro products inquiry, export inquiry Australia" 
+        />
+        <link rel="canonical" href="https://www.agrointernational.com.au/contact" />
+      </Helmet>
       
       {/* Hero Section */}
       <section className="py-20 bg-gradient-primary text-primary-foreground">
