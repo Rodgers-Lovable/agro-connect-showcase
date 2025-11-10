@@ -1,0 +1,28 @@
+{
+  "stats": [
+    {
+      "id": 1,
+      "number": "100+",
+      "label": "Partner Farms",
+      "icon": "Users"
+    },
+    {
+      "id": 2,
+      "number": "15+",
+      "label": "Countries Served",
+      "icon": "Globe"
+    },
+    {
+      "id": 3,
+      "number": "16",
+      "label": "Premium Products",
+      "icon": "Package"
+    },
+    {
+      "id": 4,
+      "number": "5",
+      "label": "African Regions",
+      "icon": "MapPin"
+    }
+  ]
+}

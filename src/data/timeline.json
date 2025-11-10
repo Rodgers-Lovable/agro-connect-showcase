@@ -1,0 +1,34 @@
+{
+  "timeline": [
+    {
+      "id": 1,
+      "year": "2020",
+      "title": "Company Founded",
+      "description": "AgroInternational Pty Ltd established with a vision to connect premium agro-products with global markets."
+    },
+    {
+      "id": 2,
+      "year": "2021",
+      "title": "Product Line Expansion",
+      "description": "Expanded portfolio to include coffee, tea, macadamia, and premium spices from sustainable sources."
+    },
+    {
+      "id": 3,
+      "year": "2022",
+      "title": "International Partnerships",
+      "description": "Established partnerships with distributors across Asia, Europe, and the Middle East."
+    },
+    {
+      "id": 4,
+      "year": "2023",
+      "title": "Sustainability Certification",
+      "description": "Achieved Organic and Fairtrade certifications, reinforcing our commitment to ethical sourcing."
+    },
+    {
+      "id": 5,
+      "year": "2024",
+      "title": "Global Growth",
+      "description": "Serving 15+ countries worldwide with a network of 100+ partner farms and growing."
+    }
+  ]
+}
