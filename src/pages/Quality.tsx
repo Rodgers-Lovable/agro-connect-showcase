@@ -231,7 +231,7 @@ const Quality = () => {
       {/* Sustainable Farming Practices */}
       <section className="py-20 bg-background relative overflow-hidden">
         <div
-          className="absolute inset-0 opacity-[0.03] bg-cover bg-center"
+          className="absolute inset-0 opacity-[0.2] bg-cover bg-center"
           style={{ backgroundImage: `url(${sustainabilityImage})` }}
         ></div>
         
