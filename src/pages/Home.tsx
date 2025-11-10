@@ -162,8 +162,13 @@ const Home = () => {
       </section>
 
       {/* Trust Indicators */}
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4">
+      <section className="py-20 bg-gradient-to-br from-muted/30 via-background to-muted/20 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-10 right-10 w-72 h-72 bg-accent rounded-full blur-3xl"></div>
+          <div className="absolute bottom-10 left-10 w-96 h-96 bg-primary rounded-full blur-3xl"></div>
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
             <h2 className="font-montserrat font-bold text-4xl md:text-5xl text-primary mb-4">
               Quality You Can Trust
@@ -173,20 +178,30 @@ const Home = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {certifications.map((cert) => {
+          <div className="flex flex-wrap justify-center items-stretch gap-6 max-w-6xl mx-auto">
+            {certifications.map((cert, index) => {
               const IconComponent = cert.icon === "Leaf" ? Shield : cert.icon === "Handshake" ? Globe : Award;
               return (
-                <div key={cert.id} className="text-center">
-                  <div className="mx-auto w-20 h-20 bg-accent/10 rounded-full flex items-center justify-center mb-4">
-                    <IconComponent className="h-10 w-10 text-accent" />
+                <div 
+                  key={cert.id} 
+                  className="flex-1 min-w-[250px] max-w-[280px] group"
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
+                  <div className="h-full p-6 rounded-lg bg-background/60 backdrop-blur-sm border border-border/50 hover:border-accent/50 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                    <div className="flex items-start gap-4">
+                      <div className="flex-shrink-0 w-14 h-14 bg-gradient-to-br from-accent/20 to-accent/5 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                        <IconComponent className="h-7 w-7 text-accent" />
+                      </div>
+                      <div>
+                        <h3 className="font-montserrat font-semibold text-lg text-primary mb-2 group-hover:text-accent transition-colors">
+                          {cert.name}
+                        </h3>
+                        <p className="font-lato text-sm text-muted-foreground leading-relaxed">
+                          {cert.description}
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                  <h3 className="font-montserrat font-semibold text-xl text-primary mb-2">
-                    {cert.name}
-                  </h3>
-                  <p className="font-lato text-muted-foreground">
-                    {cert.description}
-                  </p>
                 </div>
               );
             })}
@@ -197,11 +212,12 @@ const Home = () => {
       {/* Why Choose Us */}
       <section className="py-20 bg-background relative overflow-hidden">
         <div
-          className="absolute inset-0 opacity-10 bg-cover bg-center"
+          className="absolute inset-0 opacity-[0.03] bg-cover bg-center"
           style={{ backgroundImage: `url(${logisticsImage})` }}
         ></div>
+        
         <div className="container mx-auto px-4 relative z-10">
-          <div className="text-center mb-16">
+          <div className="text-center mb-20">
             <h2 className="font-montserrat font-bold text-4xl md:text-5xl text-primary mb-4">
               Why Choose Us
             </h2>
@@ -210,27 +226,35 @@ const Home = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature) => {
+          <div className="max-w-5xl mx-auto space-y-8">
+            {features.map((feature, index) => {
               const IconComponent = 
                 feature.icon === "Globe" ? Globe : 
                 feature.icon === "Leaf" ? Leaf : 
                 feature.icon === "Shield" ? Shield : 
                 Truck;
+              const isEven = index % 2 === 0;
+              
               return (
-                <Card key={feature.id} className="border-2 hover:border-accent transition-colors">
-                  <CardContent className="pt-8 pb-6 text-center">
-                    <div className="mx-auto w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mb-4">
-                      <IconComponent className="h-8 w-8 text-accent" />
+                <div 
+                  key={feature.id} 
+                  className={`flex flex-col md:flex-row items-center gap-8 ${!isEven ? 'md:flex-row-reverse' : ''}`}
+                >
+                  <div className="flex-shrink-0">
+                    <div className="w-24 h-24 bg-gradient-to-br from-accent to-accent/60 rounded-2xl flex items-center justify-center shadow-lg transform hover:scale-110 transition-transform duration-300">
+                      <IconComponent className="h-12 w-12 text-white" />
                     </div>
-                    <h3 className="font-montserrat font-semibold text-xl text-primary mb-3">
+                  </div>
+                  
+                  <div className={`flex-1 ${!isEven ? 'md:text-right' : ''}`}>
+                    <h3 className="font-montserrat font-bold text-2xl md:text-3xl text-primary mb-3">
                       {feature.title}
                     </h3>
-                    <p className="font-lato text-muted-foreground">
+                    <p className="font-lato text-lg text-foreground/80 leading-relaxed">
                       {feature.description}
                     </p>
-                  </CardContent>
-                </Card>
+                  </div>
+                </div>
               );
             })}
           </div>
@@ -238,7 +262,7 @@ const Home = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-20 bg-gradient-to-b from-muted/20 to-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="font-montserrat font-bold text-4xl md:text-5xl text-primary mb-4">
@@ -250,18 +274,23 @@ const Home = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {testimonials.map((testimonial) => (
-              <Card key={testimonial.id} className="border-2">
-                <CardContent className="pt-8 pb-6">
+            {testimonials.map((testimonial, index) => (
+              <div 
+                key={testimonial.id} 
+                className="relative group"
+                style={{ animationDelay: `${index * 150}ms` }}
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-primary/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="relative p-8 rounded-xl bg-background/80 backdrop-blur-sm border border-border/50 hover:border-accent/30 transition-all duration-300 h-full">
                   <div className="mb-6">
-                    <svg className="w-10 h-10 text-accent/30" fill="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-10 h-10 text-accent/40" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                     </svg>
                   </div>
-                  <p className="font-lato text-lg text-foreground mb-6 italic">
+                  <p className="font-lato text-lg text-foreground mb-6 italic leading-relaxed">
                     "{testimonial.quote}"
                   </p>
-                  <div className="border-t pt-4">
+                  <div className="border-t border-border/50 pt-4 mt-auto">
                     <p className="font-montserrat font-semibold text-primary">
                       {testimonial.author}
                     </p>
@@ -269,8 +298,8 @@ const Home = () => {
                       {testimonial.role} • {testimonial.location}
                     </p>
                   </div>
-                </CardContent>
-              </Card>
+                </div>
+              </div>
             ))}
           </div>
         </div>
