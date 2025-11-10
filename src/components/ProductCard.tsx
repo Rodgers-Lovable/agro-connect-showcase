@@ -6,13 +6,34 @@ import { Badge } from "@/components/ui/badge";
 interface ProductCardProps {
   id: string;
   name: string;
+  image?: string;
   shortDescription: string;
   certifications?: string[];
 }
 
-const ProductCard = ({ id, name, shortDescription, certifications = [] }: ProductCardProps) => {
+const ProductCard = ({ id, name, image, shortDescription, certifications = [] }: ProductCardProps) => {
+  const getImageSrc = () => {
+    if (!image) return null;
+    try {
+      return new URL(`../assets/products/${image}`, import.meta.url).href;
+    } catch {
+      return null;
+    }
+  };
+
+  const imageSrc = getImageSrc();
+
   return (
-    <Card className="group hover:shadow-medium transition-all duration-300 hover:-translate-y-1">
+    <Card className="group hover:shadow-medium transition-all duration-300 hover:-translate-y-1 overflow-hidden">
+      {imageSrc && (
+        <div className="aspect-square overflow-hidden bg-muted">
+          <img 
+            src={imageSrc} 
+            alt={name}
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          />
+        </div>
+      )}
       <CardHeader>
         <CardTitle className="font-montserrat text-xl text-primary group-hover:text-accent transition-colors">
           {name}
