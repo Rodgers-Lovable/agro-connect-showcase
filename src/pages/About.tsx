@@ -43,8 +43,13 @@ const About = () => {
         <title>About Us - AgroInternational | Premium Agro-Products Exporter</title>
         <meta 
           name="description" 
-          content="Learn about AgroInternational Pty Ltd - Leading exporter of premium agro-products from Australia. Our mission, vision, and commitment to sustainable farming." 
+          content="Learn about AgroInternational Pty Ltd - Leading exporter of premium agro-products from Australia. Our mission, vision, commitment to sustainable farming, and CEO Abdallah Ndwala's leadership." 
         />
+        <meta 
+          name="keywords" 
+          content="about AgroInternational, agro exporter Australia, CEO Abdallah Ndwala, sustainable farming, agro export company, agricultural products Australia" 
+        />
+        <link rel="canonical" href="https://www.agrointernational.com.au/about" />
       </Helmet>
       
       <Navigation />
