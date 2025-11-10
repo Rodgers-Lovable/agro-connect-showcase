@@ -30,6 +30,8 @@ const Quality = () => {
         <link rel="canonical" href="https://www.agrointernational.com.au/quality" />
       </Helmet>
       
+      <Navigation />
+      
       {/* Hero Section */}
       <section className="py-20 bg-gradient-primary text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
