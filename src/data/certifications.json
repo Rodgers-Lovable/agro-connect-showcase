@@ -23,6 +23,24 @@
       "name": "GlobalGAP Certified",
       "description": "Good Agricultural Practices certification for safe, sustainable production",
       "icon": "Globe"
+    },
+    {
+      "id": "rainforest",
+      "name": "Rainforest Alliance",
+      "description": "Supporting environmental conservation and sustainable livelihoods",
+      "icon": "TreePine"
+    },
+    {
+      "id": "iso",
+      "name": "ISO 22000",
+      "description": "International food safety management system standard",
+      "icon": "Shield"
+    },
+    {
+      "id": "haccp",
+      "name": "HACCP Certified",
+      "description": "Hazard Analysis and Critical Control Points for food safety",
+      "icon": "ShieldCheck"
     }
   ],
   "qualityProcess": [

@@ -1,0 +1,28 @@
+{
+  "galleryItems": [
+    {
+      "id": 1,
+      "image": "quality-inspection.jpg",
+      "caption": "Hand-sorted coffee beans for premium quality",
+      "alt": "Quality inspector hand-sorting premium coffee beans"
+    },
+    {
+      "id": 2,
+      "image": "lab-testing.jpg",
+      "caption": "Laboratory analysis and testing",
+      "alt": "Agricultural laboratory testing for quality assurance"
+    },
+    {
+      "id": 3,
+      "image": "packaging.jpg",
+      "caption": "Professional packaging and sealing",
+      "alt": "Workers packaging agro products in clean facility"
+    },
+    {
+      "id": 4,
+      "image": "grading.jpg",
+      "caption": "Macadamia quality grading",
+      "alt": "Professional grading macadamia nuts by size and quality"
+    }
+  ]
+}

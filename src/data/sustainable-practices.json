@@ -1,0 +1,28 @@
+{
+  "sustainablePractices": [
+    {
+      "id": 1,
+      "stat": "85%",
+      "label": "Partner farms use organic methods",
+      "description": "Committed to chemical-free, eco-friendly farming"
+    },
+    {
+      "id": 2,
+      "stat": "500+",
+      "label": "Farmers trained annually",
+      "description": "Empowering communities through education"
+    },
+    {
+      "id": 3,
+      "stat": "100%",
+      "label": "Sustainable sourcing",
+      "description": "All products meet environmental standards"
+    },
+    {
+      "id": 4,
+      "stat": "1,200+",
+      "label": "Hectares of protected land",
+      "description": "Supporting biodiversity and conservation"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "logisticsSteps": [
+    {
+      "id": 1,
+      "title": "Order Confirmation",
+      "description": "Detailed specifications and agreement",
+      "icon": "CheckCircle"
+    },
+    {
+      "id": 2,
+      "title": "Quality Preparation",
+      "description": "Final inspection and batch preparation",
+      "icon": "PackageCheck"
+    },
+    {
+      "id": 3,
+      "title": "Documentation",
+      "description": "Export permits and certificates",
+      "icon": "FileCheck"
+    },
+    {
+      "id": 4,
+      "title": "Secure Packaging",
+      "description": "Climate-controlled containers",
+      "icon": "Package"
+    },
+    {
+      "id": 5,
+      "title": "Global Shipping",
+      "description": "Reliable freight partners",
+      "icon": "Ship"
+    },
+    {
+      "id": 6,
+      "title": "Real-time Tracking",
+      "description": "Full visibility until delivery",
+      "icon": "MapPin"
+    }
+  ]
+}

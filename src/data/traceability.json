@@ -1,0 +1,40 @@
+{
+  "traceabilitySteps": [
+    {
+      "id": 1,
+      "title": "Farm Selection",
+      "description": "Partnering with verified, certified farms",
+      "icon": "MapPin"
+    },
+    {
+      "id": 2,
+      "title": "Harvest Documentation",
+      "description": "Recording origin and harvest dates",
+      "icon": "Clipboard"
+    },
+    {
+      "id": 3,
+      "title": "Quality Inspection",
+      "description": "On-site testing and grading",
+      "icon": "Search"
+    },
+    {
+      "id": 4,
+      "title": "Processing Tracking",
+      "description": "Batch coding and facility monitoring",
+      "icon": "Factory"
+    },
+    {
+      "id": 5,
+      "title": "Export Documentation",
+      "description": "Complete compliance and certification",
+      "icon": "FileText"
+    },
+    {
+      "id": 6,
+      "title": "Global Shipping",
+      "description": "Real-time tracking to destination",
+      "icon": "Ship"
+    }
+  ]
+}

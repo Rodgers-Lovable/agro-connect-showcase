@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Shield, Globe, Award, Leaf, Truck } from "lucide-react";
+import { ArrowRight, Shield, Globe, Award, Leaf, Truck, Handshake, TreePine, ShieldCheck } from "lucide-react";
 import { Helmet } from "react-helmet";
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
@@ -179,8 +179,11 @@ const Home = () => {
           </div>
 
           <div className="flex flex-wrap justify-center items-stretch gap-6 max-w-6xl mx-auto">
-            {certifications.map((cert, index) => {
-              const IconComponent = cert.icon === "Leaf" ? Shield : cert.icon === "Handshake" ? Globe : Award;
+            {certifications.slice(0, 4).map((cert, index) => {
+              const iconMap: { [key: string]: any } = {
+                Leaf, Handshake, Award, Globe, TreePine, Shield, ShieldCheck
+              };
+              const IconComponent = iconMap[cert.icon] || Award;
               return (
                 <div 
                   key={cert.id} 

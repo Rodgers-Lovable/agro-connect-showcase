@@ -1,0 +1,34 @@
+{
+  "partnerships": [
+    {
+      "id": "fairtrade",
+      "name": "Fairtrade International",
+      "description": "Certified for ethical trading practices"
+    },
+    {
+      "id": "rainforest",
+      "name": "Rainforest Alliance",
+      "description": "Supporting sustainable agriculture"
+    },
+    {
+      "id": "iso",
+      "name": "ISO 22000",
+      "description": "Food safety management system"
+    },
+    {
+      "id": "haccp",
+      "name": "HACCP Certified",
+      "description": "Hazard analysis and critical control points"
+    },
+    {
+      "id": "organic",
+      "name": "Organic Certification",
+      "description": "International organic standards"
+    },
+    {
+      "id": "globalgap",
+      "name": "GlobalGAP",
+      "description": "Good agricultural practices"
+    }
+  ]
+}
