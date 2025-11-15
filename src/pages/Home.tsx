@@ -1,6 +1,16 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Shield, Globe, Award, Leaf, Truck, Handshake, TreePine, ShieldCheck } from "lucide-react";
+import {
+  ArrowRight,
+  Shield,
+  Globe,
+  Award,
+  Leaf,
+  Truck,
+  Handshake,
+  TreePine,
+  ShieldCheck,
+} from "lucide-react";
 import { Helmet } from "react-helmet";
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
@@ -35,24 +45,25 @@ const Home = () => {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": company.name,
-    "url": "https://www.agrointernational.com.au",
-    "logo": "https://www.agrointernational.com.au/logo.png",
-    "description": "Premium agro-products exporter from Australia. Specializing in coffee, tea, spices, oilseeds, and nuts.",
-    "address": {
+    name: company.name,
+    url: "https://www.agrointernational.com.au",
+    logo: "https://www.agrointernational.com.au/logo.png",
+    description:
+      "Premium agro-products exporter from Australia. Specializing in coffee, tea, spices, oilseeds, and nuts.",
+    address: {
       "@type": "PostalAddress",
-      "streetAddress": company.address.street,
-      "addressLocality": company.address.city,
-      "addressRegion": company.address.state,
-      "postalCode": company.address.postcode,
-      "addressCountry": company.address.country
+      streetAddress: company.address.street,
+      addressLocality: company.address.city,
+      addressRegion: company.address.state,
+      postalCode: company.address.postcode,
+      addressCountry: company.address.country,
     },
-    "contactPoint": {
+    contactPoint: {
       "@type": "ContactPoint",
-      "telephone": company.contact.phone,
-      "contactType": "sales",
-      "email": company.contact.email
-    }
+      telephone: company.contact.phone,
+      contactType: "sales",
+      email: company.contact.email,
+    },
   };
 
   return (
@@ -62,9 +73,9 @@ const Home = () => {
           {JSON.stringify(structuredData)}
         </script>
       </Helmet>
-      
+
       <Navigation />
-      
+
       {/* Hero Section */}
       <section className="relative h-[600px] flex items-center justify-center overflow-hidden">
         <div
@@ -73,23 +84,33 @@ const Home = () => {
         >
           <div className="absolute inset-0 bg-gradient-hero"></div>
         </div>
-        
+
         <div className="relative z-10 container mx-auto px-4 text-center text-primary-foreground">
           <h1 className="font-montserrat font-bold text-5xl md:text-6xl lg:text-7xl mb-6">
             Premium Agro-Products
             <br />
-            <span className="text-accent">From Australia to the World</span>
+            <span className="text-accent">From Africa to around the World</span>
           </h1>
           <p className="font-lato text-xl md:text-2xl mb-8 text-primary-foreground/90 max-w-3xl mx-auto">
-            Your trusted partner for high-quality coffee, tea, spices, oilseeds, and nuts
+            Your trusted partner for high-quality coffee, tea, spices, oilseeds,
+            and nuts
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 text-lg px-8">
+            <Button
+              asChild
+              size="lg"
+              className="bg-accent text-accent-foreground hover:bg-accent/90 text-lg px-8"
+            >
               <Link to="/products">
                 View Products <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="text-lg px-8 bg-background/90 text-black hover:bg-background border-2">
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="text-lg px-8 bg-background/90 text-black hover:bg-background border-2"
+            >
               <Link to="/contact">Request Quote</Link>
             </Button>
           </div>
@@ -105,13 +126,19 @@ const Home = () => {
                 Who We Are
               </h2>
               <p className="font-lato text-lg text-foreground mb-6 leading-relaxed">
-                AgroInternational Pty Ltd is a leading exporter of high-quality agro-products from Australia. 
-                We connect global markets with premium produce sourced from sustainable farms.
+                AgroInternational Pty Ltd is a leading exporter of high-quality
+                agro-products from Australia. We connect global markets with
+                premium produce sourced from sustainable farms.
               </p>
               <p className="font-lato text-lg text-foreground mb-8 leading-relaxed">
-                Our mission is to deliver quality, consistency, and trust — from farm to market.
+                Our mission is to deliver quality, consistency, and trust — from
+                farm to market.
               </p>
-              <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
+              <Button
+                asChild
+                size="lg"
+                className="bg-primary text-primary-foreground hover:bg-primary/90"
+              >
                 <Link to="/about">
                   Learn More <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
@@ -136,10 +163,11 @@ const Home = () => {
               Our Product Categories
             </h2>
             <p className="font-lato text-lg text-muted-foreground max-w-2xl mx-auto">
-              Explore our diverse range of premium agro-products sourced from the finest producers
+              Explore our diverse range of premium agro-products sourced from
+              the finest producers
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {categories.map((category) => (
               <CategorySection
@@ -152,7 +180,11 @@ const Home = () => {
           </div>
 
           <div className="text-center mt-12">
-            <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
+            <Button
+              asChild
+              size="lg"
+              className="bg-primary text-primary-foreground hover:bg-primary/90"
+            >
               <Link to="/products">
                 Explore All Products <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
@@ -167,7 +199,7 @@ const Home = () => {
           <div className="absolute top-10 right-10 w-72 h-72 bg-accent rounded-full blur-3xl"></div>
           <div className="absolute bottom-10 left-10 w-96 h-96 bg-primary rounded-full blur-3xl"></div>
         </div>
-        
+
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
             <h2 className="font-montserrat font-bold text-4xl md:text-5xl text-primary mb-4">
@@ -181,12 +213,18 @@ const Home = () => {
           <div className="flex flex-wrap justify-center items-stretch gap-6 max-w-6xl mx-auto">
             {certifications.slice(0, 4).map((cert, index) => {
               const iconMap: { [key: string]: any } = {
-                Leaf, Handshake, Award, Globe, TreePine, Shield, ShieldCheck
+                Leaf,
+                Handshake,
+                Award,
+                Globe,
+                TreePine,
+                Shield,
+                ShieldCheck,
               };
               const IconComponent = iconMap[cert.icon] || Award;
               return (
-                <div 
-                  key={cert.id} 
+                <div
+                  key={cert.id}
                   className="flex-1 min-w-[250px] max-w-[280px] group"
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
@@ -218,7 +256,7 @@ const Home = () => {
           className="absolute inset-0 opacity-[0.03] bg-cover bg-center"
           style={{ backgroundImage: `url(${logisticsImage})` }}
         ></div>
-        
+
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-20">
             <h2 className="font-montserrat font-bold text-4xl md:text-5xl text-primary mb-4">
@@ -231,25 +269,30 @@ const Home = () => {
 
           <div className="max-w-5xl mx-auto space-y-8">
             {features.map((feature, index) => {
-              const IconComponent = 
-                feature.icon === "Globe" ? Globe : 
-                feature.icon === "Leaf" ? Leaf : 
-                feature.icon === "Shield" ? Shield : 
-                Truck;
+              const IconComponent =
+                feature.icon === "Globe"
+                  ? Globe
+                  : feature.icon === "Leaf"
+                  ? Leaf
+                  : feature.icon === "Shield"
+                  ? Shield
+                  : Truck;
               const isEven = index % 2 === 0;
-              
+
               return (
-                <div 
-                  key={feature.id} 
-                  className={`flex flex-col md:flex-row items-center gap-8 ${!isEven ? 'md:flex-row-reverse' : ''}`}
+                <div
+                  key={feature.id}
+                  className={`flex flex-col md:flex-row items-center gap-8 ${
+                    !isEven ? "md:flex-row-reverse" : ""
+                  }`}
                 >
                   <div className="flex-shrink-0">
                     <div className="w-24 h-24 bg-gradient-to-br from-accent to-accent/60 rounded-2xl flex items-center justify-center shadow-lg transform hover:scale-110 transition-transform duration-300">
                       <IconComponent className="h-12 w-12 text-white" />
                     </div>
                   </div>
-                  
-                  <div className={`flex-1 ${!isEven ? 'md:text-right' : ''}`}>
+
+                  <div className={`flex-1 ${!isEven ? "md:text-right" : ""}`}>
                     <h3 className="font-montserrat font-bold text-2xl md:text-3xl text-primary mb-3">
                       {feature.title}
                     </h3>
@@ -278,15 +321,19 @@ const Home = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {testimonials.map((testimonial, index) => (
-              <div 
-                key={testimonial.id} 
+              <div
+                key={testimonial.id}
                 className="relative group"
                 style={{ animationDelay: `${index * 150}ms` }}
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-primary/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 <div className="relative p-8 rounded-xl bg-white backdrop-blur-sm border border-border/50 hover:border-accent/30 transition-all duration-300 h-full">
                   <div className="mb-6">
-                    <svg className="w-10 h-10 text-accent/40" fill="currentColor" viewBox="0 0 24 24">
+                    <svg
+                      className="w-10 h-10 text-accent/40"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
                       <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                     </svg>
                   </div>
@@ -319,13 +366,14 @@ const Home = () => {
             Our Global Reach
           </h2>
           <p className="font-lato text-xl mb-4 text-primary-foreground/90 max-w-3xl mx-auto leading-relaxed">
-            From our headquarters in Queensland, Australia, AgroInternational serves partners 
-            across Africa, Europe, Asia, and the Middle East.
+            From our headquarters in Queensland, Australia, AgroInternational
+            serves partners across Africa, Europe, Asia, and the Middle East.
           </p>
           <div className="flex items-center justify-center gap-2 text-2xl mb-8">
             <Globe className="h-8 w-8" />
             <p className="font-montserrat font-semibold">
-              Delivering premium agricultural products across 15+ countries and counting.
+              Delivering premium agricultural products across 15+ countries and
+              counting.
             </p>
           </div>
         </div>
@@ -367,9 +415,14 @@ const Home = () => {
             Ready to Start Your Order?
           </h2>
           <p className="font-lato text-xl mb-8 text-primary-foreground/90 max-w-2xl mx-auto">
-            Get in touch with our team for personalized quotes and expert consultation
+            Get in touch with our team for personalized quotes and expert
+            consultation
           </p>
-          <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 text-lg px-8">
+          <Button
+            asChild
+            size="lg"
+            className="bg-accent text-accent-foreground hover:bg-accent/90 text-lg px-8"
+          >
             <Link to="/contact">
               Contact Us Today <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
