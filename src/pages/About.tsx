@@ -20,7 +20,6 @@ import {
 import heroImage from "@/assets/about-hero.jpg";
 import overviewImage from "@/assets/about-overview.jpg";
 import sustainabilityImage from "@/assets/sustainability.jpg";
-import ceoPortrait from "@/assets/ceo-portrait.jpg";
 import companyData from "@/data/company.json";
 import timelineData from "@/data/timeline.json";
 import impactStatsData from "@/data/impact-stats.json";
@@ -243,7 +242,7 @@ const About = () => {
               <div className="md:col-span-1 flex justify-center">
                 <div className="relative w-64 h-64 rounded-2xl overflow-hidden shadow-2xl">
                   <img
-                    src={ceoPortrait}
+                    src=""
                     alt="Abdallah Ndwala, CEO of AgroInternational Pty Ltd"
                     className="w-full h-full object-cover"
                   />
