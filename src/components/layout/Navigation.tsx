@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import Logo from "@/assets/logo.png";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,12 +21,20 @@ const Navigation = () => {
 
   return (
     <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border shadow-soft">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
+          <Link to="/" className="flex items-center space-x-4">
+            <div className="relative w-[80px] overflow-hidden">
+              <img
+                src={Logo}
+                alt="Abdallah Ndwala, CEO of AgroInternational Pty Ltd"
+                className="w-full h-full object-cover"
+              />
+            </div>
+
             <div className="font-montserrat font-bold text-2xl text-primary">
-              <span className="text-accent">Agro</span>International
+              <span className="text-accent">Agro</span>International Pty LTD
             </div>
           </Link>
 
@@ -45,7 +54,10 @@ const Navigation = () => {
                 {link.name}
               </Link>
             ))}
-            <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90">
+            <Button
+              asChild
+              className="bg-accent text-accent-foreground hover:bg-accent/90"
+            >
               <Link to="/contact">Request Quote</Link>
             </Button>
           </div>
@@ -77,7 +89,10 @@ const Navigation = () => {
                   {link.name}
                 </Link>
               ))}
-              <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90 w-full">
+              <Button
+                asChild
+                className="bg-accent text-accent-foreground hover:bg-accent/90 w-full"
+              >
                 <Link to="/contact" onClick={() => setIsOpen(false)}>
                   Request Quote
                 </Link>
