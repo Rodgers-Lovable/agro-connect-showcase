@@ -26,7 +26,7 @@ const Footer = () => {
             <div className="relative w-[200px] overflow-hidden">
               <img
                 src={Logo}
-                alt="Abdallah Ndwala, CEO of AgroInternational Pty Ltd"
+                alt="AgroInternational Pty Ltd logo"
                 className="w-full h-full object-cover"
               />
             </div>
