@@ -28,7 +28,7 @@ const Navigation = () => {
             <div className="relative w-[80px] overflow-hidden">
               <img
                 src={Logo}
-                alt="Abdallah Ndwala, CEO of AgroInternational Pty Ltd"
+                alt="AgroInternational Pty Ltd logo"
                 className="w-full h-full object-cover"
               />
             </div>
