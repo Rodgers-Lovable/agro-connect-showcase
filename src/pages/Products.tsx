@@ -4,6 +4,7 @@ import Footer from "@/components/layout/Footer";
 import ProductCard from "@/components/ProductCard";
 import { Button } from "@/components/ui/button";
 import { Helmet } from "react-helmet";
+import { DOMAIN } from "@/lib/constants";
 import productsData from "@/data/products.json";
 import categoriesData from "@/data/categories.json";
 
@@ -28,7 +29,7 @@ const Products = () => {
           name="keywords" 
           content="premium coffee export, organic tea supplier, macadamia nuts exporter, spices export, sesame seeds, vanilla beans, turmeric, cinnamon" 
         />
-        <link rel="canonical" href="https://www.agrointernational.com.au/products" />
+        <link rel="canonical" href={`${DOMAIN}/products`} />
       </Helmet>
       
       <Navigation />

@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
+import { DOMAIN } from "@/lib/constants";
 import FarmToExportJourney from "@/components/FarmToExportJourney";
 import certificationsData from "@/data/certifications.json";
 import traceabilityData from "@/data/traceability.json";
@@ -72,7 +73,7 @@ const Quality = () => {
           name="keywords" 
           content="organic certified exporter, fair trade products, GlobalGAP certification, quality agro products, agricultural standards, ISO 22000, HACCP, sustainable farming, product traceability" 
         />
-        <link rel="canonical" href="https://www.agrointernational.com.au/quality" />
+        <link rel="canonical" href={`${DOMAIN}/quality`} />
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
         </script>

@@ -32,6 +32,7 @@ import companyData from "@/data/company.json";
 import featuresData from "@/data/features.json";
 import testimonialsData from "@/data/testimonials.json";
 import faqData from "@/data/faq.json";
+import { DOMAIN } from "@/lib/constants";
 
 const Home = () => {
   const { categories } = categoriesData;
@@ -45,11 +46,11 @@ const Home = () => {
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "@id": "https://www.agrointernational.com.au/#localbusiness",
+    "@id": `${DOMAIN}/#localbusiness`,
     name: company.name,
     description:
       "Premium agro-products exporter specializing in coffee, tea, spices, oilseeds, and nuts from Australia to global markets.",
-    url: "https://www.agrointernational.com.au",
+    url: DOMAIN,
     telephone: company.contact.phone,
     email: company.contact.email,
     address: {

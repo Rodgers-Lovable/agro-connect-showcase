@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
+import { DOMAIN } from "@/lib/constants";
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
@@ -49,7 +50,7 @@ const About = () => {
           name="keywords" 
           content="about AgroInternational, agro exporter Australia, CEO Abdallah Ndwala, sustainable farming, agro export company, agricultural products Australia" 
         />
-        <link rel="canonical" href="https://www.agrointernational.com.au/about" />
+        <link rel="canonical" href={`${DOMAIN}/about`} />
       </Helmet>
       
       <Navigation />

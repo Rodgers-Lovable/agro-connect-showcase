@@ -4,6 +4,7 @@ import ContactForm from "@/components/ContactForm";
 import { Card, CardContent } from "@/components/ui/card";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { Helmet } from "react-helmet";
+import { DOMAIN } from "@/lib/constants";
 import companyData from "@/data/company.json";
 
 const Contact = () => {
@@ -21,7 +22,7 @@ const Contact = () => {
           name="keywords" 
           content="contact agro exporter, AgroInternational contact, agro products inquiry, export inquiry Australia" 
         />
-        <link rel="canonical" href="https://www.agrointernational.com.au/contact" />
+        <link rel="canonical" href={`${DOMAIN}/contact`} />
       </Helmet>
       
       <Navigation />
