@@ -42,27 +42,65 @@ const Home = () => {
   const { faq } = faqData;
 
   // Structured Data for SEO
-  const structuredData = {
+  const localBusinessSchema = {
     "@context": "https://schema.org",
-    "@type": "Organization",
+    "@type": "LocalBusiness",
+    "@id": "https://www.agrointernational.com.au/#localbusiness",
     name: company.name,
-    url: "https://www.agrointernational.com.au",
-    logo: "https://www.agrointernational.com.au/logo.png",
     description:
-      "Premium agro-products exporter from Australia. Specializing in coffee, tea, spices, oilseeds, and nuts.",
+      "Premium agro-products exporter specializing in coffee, tea, spices, oilseeds, and nuts from Australia to global markets.",
+    url: "https://www.agrointernational.com.au",
+    telephone: company.contact.phone,
+    email: company.contact.email,
     address: {
       "@type": "PostalAddress",
       streetAddress: company.address.street,
       addressLocality: company.address.city,
       addressRegion: company.address.state,
       postalCode: company.address.postcode,
-      addressCountry: company.address.country,
+      addressCountry: "AU",
     },
-    contactPoint: {
-      "@type": "ContactPoint",
-      telephone: company.contact.phone,
-      contactType: "sales",
-      email: company.contact.email,
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: -26.7539,
+      longitude: 153.1425,
+    },
+    openingHours: ["Mo-Fr 09:00-17:00"],
+    priceRange: "$$",
+    areaServed: {
+      "@type": "Country",
+      name: "Worldwide",
+    },
+    serviceType: "Agricultural Export",
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Agro-Products",
+      itemListElement: [
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Product",
+            name: "Premium Coffee",
+            description: "High-quality coffee beans for export",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Product",
+            name: "Organic Tea",
+            description: "Certified organic tea varieties",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Product",
+            name: "Spices & Nuts",
+            description: "Premium spices, oilseeds and nuts",
+          },
+        },
+      ],
     },
   };
 
@@ -70,7 +108,7 @@ const Home = () => {
     <div className="min-h-screen flex flex-col">
       <Helmet>
         <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
+          {JSON.stringify(localBusinessSchema)}
         </script>
       </Helmet>
 
