@@ -23,7 +23,7 @@ const Footer = () => {
             <div className="text-sm text-primary-foreground/70">
               ABN: {company.abn}
             </div>
-            <div className="relative w-[200px] overflow-hidden">
+            <div className="relative w-[100px] lg:w-[150px] overflow-hidden">
               <img
                 src={Logo}
                 alt="AgroInternational Pty Ltd logo"
@@ -126,13 +126,17 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center flex justify-between">
+        <div className="border-t border-primary-foreground/20 mt-8 pt-8 text-center flex flex-col gap-3 md:flex-row md:justify-between">
           <p className="font-lato text-sm text-primary-foreground/70">
             Developed and Maintained by{" "}
-            <a href="mailto:dev@mawirab.com" className="underline text-primary">
+            <a
+              href={`https://wa.me/${company.dev.phone}`}
+              className="underline text-primary"
+            >
               Mawira
             </a>
           </p>
+
           <p className="font-lato text-sm text-primary-foreground/70">
             © {new Date().getFullYear()} {company.name}. All rights reserved.
           </p>

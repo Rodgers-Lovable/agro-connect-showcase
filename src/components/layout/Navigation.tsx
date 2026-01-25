@@ -33,7 +33,7 @@ const Navigation = () => {
               />
             </div>
 
-            <div className="font-montserrat font-bold text-2xl text-primary">
+            <div className="font-montserrat font-bold text-2xl text-primary hidden lg:block">
               <span className="text-accent">Agro</span>International Pty LTD
             </div>
           </Link>
@@ -48,7 +48,7 @@ const Navigation = () => {
                   "font-lato font-medium text-foreground/80 hover:text-accent transition-colors relative",
                   "after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-accent after:transition-all after:duration-300",
                   "hover:after:w-full",
-                  isActive(link.path) && "text-accent after:w-full"
+                  isActive(link.path) && "text-accent after:w-full",
                 )}
               >
                 {link.name}
@@ -83,7 +83,7 @@ const Navigation = () => {
                   onClick={() => setIsOpen(false)}
                   className={cn(
                     "font-lato font-medium text-foreground/80 hover:text-accent transition-colors px-2 py-1",
-                    isActive(link.path) && "text-accent"
+                    isActive(link.path) && "text-accent",
                   )}
                 >
                   {link.name}
