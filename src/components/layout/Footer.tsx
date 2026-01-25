@@ -9,10 +9,17 @@ const Footer = () => {
   return (
     <footer className="bg-secondary text-primary-foreground">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
 
           <div className="space-y-4">
+            <div className="relative w-[100px] lg:w-[150px] overflow-hidden">
+              <img
+                src={Logo}
+                alt="AgroInternational Pty Ltd logo"
+                className="w-full h-full object-cover"
+              />
+            </div>
             <h3 className="font-montserrat font-bold text-xl">
               <span className="text-primary">Agro</span>International Pty LTD.
             </h3>
@@ -22,13 +29,6 @@ const Footer = () => {
             </p>
             <div className="text-sm text-primary-foreground/70">
               ABN: {company.abn}
-            </div>
-            <div className="relative w-[100px] lg:w-[150px] overflow-hidden">
-              <img
-                src={Logo}
-                alt="AgroInternational Pty Ltd logo"
-                className="w-full h-full object-cover"
-              />
             </div>
           </div>
 
