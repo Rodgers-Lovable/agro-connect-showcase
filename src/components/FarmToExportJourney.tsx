@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { MapPin, Clipboard, Search, Factory, FileText, Ship, CheckCircle } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import traceabilityData from "@/data/traceability.json";
+import { trackJourneyStepClick, trackJourneyToggle } from "@/lib/analytics";
 
 interface TraceabilityStep {
   id: number;
@@ -52,13 +53,17 @@ const FarmToExportJourney = () => {
   }, [isAnimating, traceabilitySteps.length]);
 
   const handleStepClick = (stepId: number) => {
+    const step = traceabilitySteps[stepId];
+    trackJourneyStepClick(step?.title || "", step?.id || stepId);
     setIsAnimating(false);
     setActiveStep(stepId);
     setProgress(0);
   };
 
   const toggleAnimation = () => {
-    setIsAnimating(!isAnimating);
+    const newState = !isAnimating;
+    trackJourneyToggle(newState ? "resume" : "pause");
+    setIsAnimating(newState);
     setProgress(0);
   };
 
