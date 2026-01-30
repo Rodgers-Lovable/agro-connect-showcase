@@ -25,6 +25,7 @@ import sustainabilityImage from "@/assets/sustainability.jpg";
 import companyData from "@/data/company.json";
 import timelineData from "@/data/timeline.json";
 import impactStatsData from "@/data/impact-stats.json";
+import { trackContactUs } from "@/lib/analytics";
 
 const About = () => {
   const { company } = companyData;
@@ -74,7 +75,12 @@ const About = () => {
             At AgroInternational Pty Ltd, we bridge the gap between premium agricultural producers 
             and global markets, delivering quality, consistency, and trust in every shipment.
           </p>
-          <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
+          <Button 
+            asChild 
+            size="lg" 
+            className="bg-accent text-accent-foreground hover:bg-accent/90"
+            onClick={() => trackContactUs("hero")}
+          >
             <Link to="/contact">
               Contact Us <ArrowRight className="ml-2 h-5 w-5" />
             </Link>

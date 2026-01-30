@@ -9,3 +9,10 @@ interface ImportMetaEnv {
 interface ImportMeta {
   readonly env: ImportMetaEnv;
 }
+
+// Umami Analytics global type
+interface Window {
+  umami?: {
+    track: (event: string, data?: Record<string, unknown>) => void;
+  };
+}

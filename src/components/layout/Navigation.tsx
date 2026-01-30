@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { trackRequestQuote } from "@/lib/analytics";
 import Logo from "@/assets/logo.png";
 
 const Navigation = () => {
@@ -57,6 +58,7 @@ const Navigation = () => {
             <Button
               asChild
               className="bg-accent text-accent-foreground hover:bg-accent/90"
+              onClick={() => trackRequestQuote("nav")}
             >
               <Link to="/contact">Request Quote</Link>
             </Button>
@@ -92,8 +94,12 @@ const Navigation = () => {
               <Button
                 asChild
                 className="bg-accent text-accent-foreground hover:bg-accent/90 w-full"
+                onClick={() => {
+                  trackRequestQuote("nav");
+                  setIsOpen(false);
+                }}
               >
-                <Link to="/contact" onClick={() => setIsOpen(false)}>
+                <Link to="/contact">
                   Request Quote
                 </Link>
               </Button>

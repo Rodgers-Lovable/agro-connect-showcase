@@ -6,6 +6,7 @@ import { Mail, Phone, MapPin } from "lucide-react";
 import { Helmet } from "react-helmet";
 import { DOMAIN } from "@/lib/constants";
 import companyData from "@/data/company.json";
+import { trackExternalLinkClick } from "@/lib/analytics";
 
 const Contact = () => {
   const { company } = companyData;
@@ -70,6 +71,7 @@ const Contact = () => {
                       <a
                         href={`tel:${company.contact.phone}`}
                         className="font-lato text-foreground/80 hover:text-accent transition-colors"
+                        onClick={() => trackExternalLinkClick("phone")}
                       >
                         {company.contact.phone}
                       </a>
@@ -91,6 +93,7 @@ const Contact = () => {
                       <a
                         href={`mailto:${company.contact.email}`}
                         className="font-lato text-foreground/80 hover:text-accent transition-colors"
+                        onClick={() => trackExternalLinkClick("email")}
                       >
                         {company.contact.email}
                       </a>
