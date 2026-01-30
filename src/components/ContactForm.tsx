@@ -38,22 +38,23 @@ const ContactForm = () => {
 
   const onSubmit = async (data: ContactFormData) => {
     try {
-      // EmailJS configuration - Replace these with your actual EmailJS credentials
-      // To set up EmailJS:
-      // 1. Sign up at https://www.emailjs.com/
-      // 2. Create an email service
-      // 3. Create an email template
-      // 4. Replace the IDs below with your actual IDs from EmailJS dashboard
-      
-      const EMAILJS_SERVICE_ID = "your_service_id";
-      const EMAILJS_TEMPLATE_ID = "your_template_id";
-      const EMAILJS_PUBLIC_KEY = "your_public_key";
+      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
-      // Uncomment and configure when ready to use EmailJS
-      /*
+      if (!serviceId || !templateId || !publicKey) {
+        console.error("EmailJS credentials not configured");
+        toast({
+          title: "Configuration Error",
+          description: "Email service is not configured. Please contact support.",
+          variant: "destructive",
+        });
+        return;
+      }
+
       await emailjs.send(
-        EMAILJS_SERVICE_ID,
-        EMAILJS_TEMPLATE_ID,
+        serviceId,
+        templateId,
         {
           from_name: data.name,
           from_email: data.email,
@@ -61,9 +62,8 @@ const ContactForm = () => {
           phone: data.phone || "N/A",
           message: data.message,
         },
-        EMAILJS_PUBLIC_KEY
+        publicKey
       );
-      */
 
       toast({
         title: "Message Sent!",
