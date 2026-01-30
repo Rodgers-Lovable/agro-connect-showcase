@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { trackProductQuoteRequest } from "@/lib/analytics";
 
 interface ProductCardProps {
   id: string;
@@ -52,7 +53,12 @@ const ProductCard = ({ id, name, image, shortDescription, certifications = [] }:
         )}
       </CardContent>
       <CardFooter>
-        <Button asChild variant="outline" className="w-full group-hover:bg-accent group-hover:text-accent-foreground group-hover:border-accent transition-colors">
+        <Button 
+          asChild 
+          variant="outline" 
+          className="w-full group-hover:bg-accent group-hover:text-accent-foreground group-hover:border-accent transition-colors"
+          onClick={() => trackProductQuoteRequest(name)}
+        >
           <Link to="/contact">Request Quote</Link>
         </Button>
       </CardFooter>

@@ -1,3 +1,4 @@
+import { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -7,6 +8,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import emailjs from "@emailjs/browser";
+import { trackFormStart, trackFormSubmit, trackFormSuccess, trackFormError } from "@/lib/analytics";
 
 const contactSchema = z.object({
   name: z.string().trim().min(1, "Name is required").max(100, "Name must be less than 100 characters"),
@@ -20,6 +22,9 @@ type ContactFormData = z.infer<typeof contactSchema>;
 
 const ContactForm = () => {
   const { toast } = useToast();
+  const [hasStartedForm, setHasStartedForm] = useState(false);
+  const formRef = useRef<HTMLFormElement>(null);
+  
   const {
     register,
     handleSubmit,
@@ -36,7 +41,24 @@ const ContactForm = () => {
     },
   });
 
+  useEffect(() => {
+    const form = formRef.current;
+    if (!form) return;
+
+    const handleFocus = () => {
+      if (!hasStartedForm) {
+        trackFormStart();
+        setHasStartedForm(true);
+      }
+    };
+
+    form.addEventListener("focusin", handleFocus);
+    return () => form.removeEventListener("focusin", handleFocus);
+  }, [hasStartedForm]);
+
   const onSubmit = async (data: ContactFormData) => {
+    trackFormSubmit();
+    
     try {
       const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
       const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
@@ -44,6 +66,7 @@ const ContactForm = () => {
 
       if (!serviceId || !templateId || !publicKey) {
         console.error("EmailJS credentials not configured");
+        trackFormError("config_error");
         toast({
           title: "Configuration Error",
           description: "Email service is not configured. Please contact support.",
@@ -65,14 +88,17 @@ const ContactForm = () => {
         publicKey
       );
 
+      trackFormSuccess();
       toast({
         title: "Message Sent!",
         description: "Thank you for your inquiry. We'll get back to you soon.",
       });
 
       reset();
+      setHasStartedForm(false);
     } catch (error) {
       console.error("Email sending error:", error);
+      trackFormError("email_send_failed");
       toast({
         title: "Error",
         description: "Failed to send message. Please try again later.",
@@ -82,7 +108,7 @@ const ContactForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+    <form ref={formRef} onSubmit={handleSubmit(onSubmit)} className="space-y-6">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="space-y-2">
           <Label htmlFor="name">Name *</Label>

@@ -33,6 +33,13 @@ import featuresData from "@/data/features.json";
 import testimonialsData from "@/data/testimonials.json";
 import faqData from "@/data/faq.json";
 import { DOMAIN } from "@/lib/constants";
+import { 
+  trackViewProducts, 
+  trackRequestQuote, 
+  trackLearnMore, 
+  trackExploreProducts, 
+  trackFaqExpand 
+} from "@/lib/analytics";
 
 const Home = () => {
   const { categories } = categoriesData;
@@ -139,6 +146,7 @@ const Home = () => {
               asChild
               size="lg"
               className="bg-accent text-accent-foreground hover:bg-accent/90 text-lg px-8"
+              onClick={() => trackViewProducts("hero")}
             >
               <Link to="/products">
                 View Products <ArrowRight className="ml-2 h-5 w-5" />
@@ -149,6 +157,7 @@ const Home = () => {
               size="lg"
               variant="outline"
               className="text-lg px-8 bg-background/90 text-black hover:bg-background border-2"
+              onClick={() => trackRequestQuote("hero")}
             >
               <Link to="/contact">Request Quote</Link>
             </Button>
@@ -177,6 +186,7 @@ const Home = () => {
                 asChild
                 size="lg"
                 className="bg-primary text-primary-foreground hover:bg-primary/90"
+                onClick={() => trackLearnMore("hero")}
               >
                 <Link to="/about">
                   Learn More <ArrowRight className="ml-2 h-5 w-5" />
@@ -223,6 +233,7 @@ const Home = () => {
               asChild
               size="lg"
               className="bg-primary text-primary-foreground hover:bg-primary/90"
+              onClick={() => trackExploreProducts()}
             >
               <Link to="/products">
                 Explore All Products <ArrowRight className="ml-2 h-5 w-5" />
@@ -434,7 +445,10 @@ const Home = () => {
             <Accordion type="single" collapsible className="w-full">
               {faq.map((item) => (
                 <AccordionItem key={item.id} value={`item-${item.id}`}>
-                  <AccordionTrigger className="font-montserrat font-semibold text-lg text-left">
+                  <AccordionTrigger 
+                    className="font-montserrat font-semibold text-lg text-left"
+                    onClick={() => trackFaqExpand(item.question)}
+                  >
                     {item.question}
                   </AccordionTrigger>
                   <AccordionContent className="font-lato text-base text-muted-foreground">

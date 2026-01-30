@@ -7,6 +7,7 @@ import { Helmet } from "react-helmet";
 import { DOMAIN } from "@/lib/constants";
 import productsData from "@/data/products.json";
 import categoriesData from "@/data/categories.json";
+import { trackCategoryFilter } from "@/lib/analytics";
 
 const Products = () => {
   const { products } = productsData;
@@ -52,7 +53,10 @@ const Products = () => {
           <div className="flex flex-wrap gap-4 justify-center">
             <Button
               variant={selectedCategory === "all" ? "default" : "outline"}
-              onClick={() => setSelectedCategory("all")}
+              onClick={() => {
+                trackCategoryFilter("all");
+                setSelectedCategory("all");
+              }}
               className={selectedCategory === "all" ? "bg-accent text-accent-foreground" : ""}
             >
               All Products
@@ -61,7 +65,10 @@ const Products = () => {
               <Button
                 key={category.id}
                 variant={selectedCategory === category.id ? "default" : "outline"}
-                onClick={() => setSelectedCategory(category.id)}
+                onClick={() => {
+                  trackCategoryFilter(category.id);
+                  setSelectedCategory(category.id);
+                }}
                 className={selectedCategory === category.id ? "bg-accent text-black hover:text-white" : ""}
               >
                 {category.name}
