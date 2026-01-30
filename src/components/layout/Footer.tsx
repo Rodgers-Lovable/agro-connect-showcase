@@ -27,6 +27,7 @@ const Footer = () => {
               Premium agro-products exporter connecting quality producers with
               global markets.
             </p>
+            
             <div className="text-sm text-primary-foreground/70">
               ABN: {company.abn}
             </div>
