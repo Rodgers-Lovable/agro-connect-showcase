@@ -1,0 +1,69 @@
+{
+  "team": [
+    {
+      "id": "abdallah-ndwala",
+      "name": "Abdallah Ndwala",
+      "title": "Founder & Director",
+      "photo": "ceo.jpg",
+      "description": "Abdallah Ndwala is the Founder and Director of AgroInternational Pty Ltd, where he provides strategic leadership and oversees the company's operations, growth, and long-term development. He is responsible for establishing the company's vision, developing strategic partnerships, identifying new market opportunities, and ensuring the successful delivery of AgroInternational's objectives within the agricultural and international trade sectors. With over 16 years of senior management experience in the hospitality industry and more than 11 years of specialized experience in the coffee sector, Abdallah brings extensive expertise in business operations, customer relationship management, supply chain coordination, and agricultural product development. His strong background in hospitality and coffee production has enabled him to build valuable relationships across local and international markets, while driving operational excellence and sustainable business growth. Through his leadership, AgroInternational Pty Ltd continues to strengthen its position as a trusted partner in agricultural trade, connecting producers and buyers across global markets.",
+      "responsibilities": [
+        "Strategic leadership and company direction",
+        "Global partnership development",
+        "Stakeholder and investor relations",
+        "Ethical sourcing oversight"
+      ]
+    },
+    {
+      "id": "member-2",
+      "name": "Jane Smith",
+      "title": "Head of Operations",
+      "photo": "jane-smith.jpg",
+      "description": "Jane oversees the end-to-end logistics and operations that ensure every shipment meets AgroInternational's quality standards and delivery commitments.",
+      "responsibilities": [
+        "Supply chain management",
+        "Export logistics coordination",
+        "Quality assurance processes",
+        "Compliance and documentation"
+      ]
+    },
+    {
+      "id": "member-3",
+      "name": "David Osei",
+      "title": "Head of Sourcing",
+      "photo": "david-osei.jpg",
+      "description": "David manages our network of partner farms across Africa and Asia-Pacific, ensuring sustainable and ethical sourcing practices at every level.",
+      "responsibilities": [
+        "Farm partnership development",
+        "Sustainable sourcing strategy",
+        "Supplier quality audits",
+        "Regional market expansion"
+      ]
+    },
+    {
+      "id": "member-4",
+      "name": "Sarah Lee",
+      "title": "Sales & Business Development",
+      "photo": "sarah-lee.jpg",
+      "description": "Sarah drives client acquisition and revenue growth, building long-term relationships with buyers and distributors across Europe, Asia, and the Middle East.",
+      "responsibilities": [
+        "Client acquisition and retention",
+        "Market research and analysis",
+        "Pricing and contract negotiation",
+        "Trade fair and industry representation"
+      ]
+    },
+    {
+      "id": "member-5",
+      "name": "Tom Kariuki",
+      "title": "Quality & Compliance Manager",
+      "photo": "tom-kariuki.jpg",
+      "description": "Tom ensures every product exported by AgroInternational meets rigorous international standards, managing certifications and regulatory compliance across all markets.",
+      "responsibilities": [
+        "Product quality inspections",
+        "Certification management (Organic, Fairtrade, HACCP)",
+        "Regulatory compliance",
+        "Quality documentation and reporting"
+      ]
+    }
+  ]
+}
