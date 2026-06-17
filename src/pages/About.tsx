@@ -26,6 +26,7 @@ import companyData from "@/data/company.json";
 import timelineData from "@/data/timeline.json";
 import impactStatsData from "@/data/impact-stats.json";
 import { trackContactUs } from "@/lib/analytics";
+import TeamTeaser from "@/components/TeamTeaser";
 
 const About = () => {
   const { company } = companyData;
@@ -232,6 +233,8 @@ const About = () => {
           </div>
         </div>
       </section>
+
+      <TeamTeaser />
 
       {/* Leadership Section */}
       <section className="py-20 bg-white from-muted/20 to-background">
