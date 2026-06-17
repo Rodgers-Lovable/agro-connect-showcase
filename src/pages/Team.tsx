@@ -26,7 +26,7 @@ const photoMap: Record<string, string> = {
 
 const Team = () => {
   const [selectedMember, setSelectedMember] = useState<TeamMember | null>(null);
-  const { team } = teamData;
+  const [founder, ...members] = teamData.team as TeamMember[];
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -53,14 +53,35 @@ const Team = () => {
         </div>
       </section>
 
-      {/* Team Grid */}
+      {/* Team Hierarchy */}
       <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {team.map((member) => (
+        <div className="container mx-auto px-4 max-w-5xl">
+
+          {/* Founder — centered, prominent */}
+          <div className="flex justify-center mb-4">
+            <div className="w-64">
+              <TeamCard
+                member={founder}
+                photoSrc={photoMap[founder.photo]}
+                onSelect={setSelectedMember}
+              />
+            </div>
+          </div>
+
+          {/* Connecting line */}
+          <div className="flex justify-center mb-4">
+            <div className="w-px h-8 bg-border" />
+          </div>
+          <div className="flex justify-center mb-8">
+            <div className="w-1/2 h-px bg-border" />
+          </div>
+
+          {/* Team members — 4-col grid */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+            {members.map((member) => (
               <TeamCard
                 key={member.id}
-                member={member as TeamMember}
+                member={member}
                 photoSrc={photoMap[member.photo]}
                 onSelect={setSelectedMember}
               />
@@ -74,42 +95,69 @@ const Team = () => {
         open={!!selectedMember}
         onOpenChange={(open) => { if (!open) setSelectedMember(null); }}
       >
-        <DialogContent className="max-w-2xl p-0 overflow-hidden">
+        <DialogContent className="max-w-[70vw] p-0 overflow-hidden">
           {selectedMember && (
-            <div className="flex flex-col sm:flex-row">
-              {/* Photo */}
-              <div className="sm:w-2/5 h-64 sm:h-auto overflow-hidden flex-shrink-0">
-                <img
-                  src={photoMap[selectedMember.photo]}
-                  alt={`${selectedMember.name}, ${selectedMember.title}`}
-                  className="w-full h-full object-cover"
-                />
+            <div className="p-8 overflow-y-auto max-h-[85vh]">
+
+              {/* Avatar + name/title */}
+              <div className="flex items-center gap-6 mb-6">
+                <div className="w-24 h-24 rounded-full overflow-hidden flex-shrink-0 ring-4 ring-accent/20">
+                  <img
+                    src={photoMap[selectedMember.photo]}
+                    alt={`${selectedMember.name}, ${selectedMember.title}`}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div>
+                  <h2 className="font-montserrat font-bold text-2xl text-primary mb-1">
+                    {selectedMember.name}
+                  </h2>
+                  <p className="font-lato text-base text-accent">
+                    {selectedMember.title}
+                  </p>
+                </div>
               </div>
 
-              {/* Details */}
-              <div className="sm:w-3/5 p-6 overflow-y-auto max-h-[70vh]">
-                <h2 className="font-montserrat font-bold text-2xl text-primary mb-1">
-                  {selectedMember.name}
-                </h2>
-                <p className="font-lato text-lg text-accent mb-4">
-                  {selectedMember.title}
-                </p>
-                <p className="font-lato text-foreground/80 leading-relaxed mb-6">
-                  {selectedMember.description}
-                </p>
+              <hr className="border-border/40 mb-6" />
 
-                <h3 className="font-montserrat font-semibold text-base text-primary mb-3">
-                  Key Responsibilities
-                </h3>
-                <ul className="space-y-2">
-                  {selectedMember.responsibilities.map((item, i) => (
-                    <li key={i} className="flex items-start gap-2">
-                      <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
-                      <span className="font-lato text-foreground/80 text-sm">{item}</span>
-                    </li>
-                  ))}
-                </ul>
+              {/* Description */}
+              <p className="font-lato text-foreground/80 leading-relaxed mb-8">
+                {selectedMember.description}
+              </p>
+
+              {/* Expertise + Responsibilities side by side */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                <div>
+                  <h3 className="font-montserrat font-semibold text-sm uppercase tracking-wider text-muted-foreground mb-4">
+                    Expertise
+                  </h3>
+                  <div className="flex flex-wrap gap-2">
+                    {selectedMember.expertise.map((item, i) => (
+                      <span
+                        key={i}
+                        className="font-lato text-xs px-3 py-1.5 rounded-full bg-accent/10 text-accent border border-accent/20"
+                      >
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <div>
+                  <h3 className="font-montserrat font-semibold text-sm uppercase tracking-wider text-muted-foreground mb-4">
+                    Responsibilities
+                  </h3>
+                  <ul className="space-y-2">
+                    {selectedMember.responsibilities.map((item, i) => (
+                      <li key={i} className="flex items-start gap-2">
+                        <CheckCircle2 className="h-4 w-4 text-accent flex-shrink-0 mt-0.5" />
+                        <span className="font-lato text-foreground/80 text-sm">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
+
             </div>
           )}
         </DialogContent>
