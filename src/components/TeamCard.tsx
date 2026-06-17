@@ -5,6 +5,7 @@ interface TeamMember {
   photo: string;
   description: string;
   responsibilities: string[];
+  expertise: string[];
 }
 
 interface TeamCardProps {
@@ -31,7 +32,9 @@ const TeamCard = ({ member, photoSrc, onSelect }: TeamCardProps) => {
           {member.name}
         </h3>
         <p className="font-lato text-sm text-accent mb-3">{member.title}</p>
-        <p className="font-lato text-xs text-muted-foreground">View Profile →</p>
+        <p className="font-lato text-xs text-muted-foreground">
+          View Profile →
+        </p>
       </div>
     </button>
   );
