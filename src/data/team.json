@@ -4,65 +4,127 @@
       "id": "abdallah-ndwala",
       "name": "Abdallah Ndwala",
       "title": "Founder & Director",
-      "photo": "ceo.jpg",
+      "photo": "abdallah.jpeg",
       "description": "Abdallah Ndwala is the Founder and Director of AgroInternational Pty Ltd, where he provides strategic leadership and oversees the company's operations, growth, and long-term development. He is responsible for establishing the company's vision, developing strategic partnerships, identifying new market opportunities, and ensuring the successful delivery of AgroInternational's objectives within the agricultural and international trade sectors. With over 16 years of senior management experience in the hospitality industry and more than 11 years of specialized experience in the coffee sector, Abdallah brings extensive expertise in business operations, customer relationship management, supply chain coordination, and agricultural product development. His strong background in hospitality and coffee production has enabled him to build valuable relationships across local and international markets, while driving operational excellence and sustainable business growth. Through his leadership, AgroInternational Pty Ltd continues to strengthen its position as a trusted partner in agricultural trade, connecting producers and buyers across global markets.",
       "responsibilities": [
         "Strategic leadership and company direction",
         "Global partnership development",
-        "Stakeholder and investor relations",
-        "Ethical sourcing oversight"
+        "Market expansion and business growth",
+        "Agricultural trade oversight"
+      ],
+      "expertise": [
+        "Strategic Leadership & Business Development",
+        "International Trade & Market Expansion",
+        "Coffee Industry Operations & Supply Chains",
+        "Agricultural Product Development",
+        "Hospitality Management",
+        "Customer Relationship Management",
+        "Partnership & Stakeholder Engagement",
+        "Operational Management & Process Improvement",
+        "Import & Export Trade",
+        "Sustainable Business Growth"
       ]
     },
     {
-      "id": "member-2",
-      "name": "Jane Smith",
-      "title": "Head of Operations",
-      "photo": "jane-smith.jpg",
-      "description": "Jane oversees the end-to-end logistics and operations that ensure every shipment meets AgroInternational's quality standards and delivery commitments.",
+      "id": "joe-chan",
+      "name": "Joe Chan",
+      "title": "Operational Manager – Australia",
+      "photo": "chan.jpeg",
+      "description": "As Operational Manager for Agro International in Australia, Joe oversees international trade operations, supply chain management, logistics coordination, quality assurance, and business development across global markets. With over 15 years of experience in international logistics, import/export operations, and cross-border trade, he specializes in connecting Eastern and Western markets while ensuring efficient product movement, regulatory compliance, and quality control throughout the supply chain.",
       "responsibilities": [
-        "Supply chain management",
-        "Export logistics coordination",
-        "Quality assurance processes",
-        "Compliance and documentation"
+        "Managing end-to-end import and export operations",
+        "Coordinating international logistics and customs clearance",
+        "Implementing quality assurance systems",
+        "Building strategic supplier and distributor relationships",
+        "Negotiating commercial agreements",
+        "Ensuring trade and regulatory compliance",
+        "Supporting global market expansion"
+      ],
+      "expertise": [
+        "International Trade & Commerce",
+        "Global Supply Chain Management",
+        "Import & Export Operations",
+        "Agricultural Products & Commodities",
+        "Quality Assurance & Compliance",
+        "Procurement & Vendor Management",
+        "Logistics & Distribution",
+        "Cross-Border Business Development"
       ]
     },
     {
-      "id": "member-3",
-      "name": "David Osei",
-      "title": "Head of Sourcing",
-      "photo": "david-osei.jpg",
-      "description": "David manages our network of partner farms across Africa and Asia-Pacific, ensuring sustainable and ethical sourcing practices at every level.",
+      "id": "derrick-abdul-wakil",
+      "name": "Derrick Abdul Wakil",
+      "title": "United States Representative",
+      "photo": "wakil.jpeg",
+      "description": "Derrick Abdul Wakil serves as the United States Representative for Agro International Pty Ltd, focusing on African coffee, tea, herbs, and spices within the agriculture and agribusiness sector. He supports the sourcing, promotion, and international trade of African-grown products, helping connect producers with global buyers and distribution networks. He also contributes to the development of export opportunities, ensures product quality aligns with international market standards, and strengthens supply chains that bring African agricultural products to broader global markets.",
       "responsibilities": [
-        "Farm partnership development",
-        "Sustainable sourcing strategy",
-        "Supplier quality audits",
-        "Regional market expansion"
+        "Representing Agro International in the United States",
+        "Promoting African agricultural products",
+        "Developing export opportunities",
+        "Connecting producers with international buyers",
+        "Supporting quality assurance initiatives",
+        "Strengthening global supply chains"
+      ],
+      "expertise": [
+        "Agricultural Trade",
+        "Export Market Development",
+        "Coffee, Tea, Herbs & Spices",
+        "International Business Relations",
+        "Product Promotion",
+        "Supply Chain Development",
+        "Global Distribution Networks",
+        "Agribusiness"
       ]
     },
     {
-      "id": "member-4",
-      "name": "Sarah Lee",
-      "title": "Sales & Business Development",
-      "photo": "sarah-lee.jpg",
-      "description": "Sarah drives client acquisition and revenue growth, building long-term relationships with buyers and distributors across Europe, Asia, and the Middle East.",
+      "id": "loretta-ndwala",
+      "name": "Loretta Ndwala",
+      "title": "Regional Head of Sales – Africa, Australia & Asia Pacific",
+      "photo": "loretta.jpeg",
+      "description": "Loretta Ndwala is a senior commercial leader driving strategic growth and market expansion across Africa, Australia, and the Asia Pacific region. She leads the execution of scalable sales strategies, forges high-value partnerships, and unlocks new market opportunities that accelerate AgroInternational’s global footprint. With a strong focus on business building, Loretta is instrumental in strengthening distribution networks, optimizing revenue performance, and positioning the company for sustained international growth and competitive advantage.",
       "responsibilities": [
-        "Client acquisition and retention",
-        "Market research and analysis",
-        "Pricing and contract negotiation",
-        "Trade fair and industry representation"
+        "Leading regional sales strategy",
+        "Driving market expansion initiatives",
+        "Building strategic partnerships",
+        "Strengthening distribution networks",
+        "Optimizing revenue growth",
+        "Identifying new business opportunities"
+      ],
+      "expertise": [
+        "Sales Leadership",
+        "Market Expansion",
+        "Strategic Partnerships",
+        "Business Development",
+        "Revenue Growth",
+        "Distribution Network Management",
+        "Commercial Strategy",
+        "International Market Development"
       ]
     },
     {
-      "id": "member-5",
-      "name": "Tom Kariuki",
-      "title": "Quality & Compliance Manager",
-      "photo": "tom-kariuki.jpg",
-      "description": "Tom ensures every product exported by AgroInternational meets rigorous international standards, managing certifications and regulatory compliance across all markets.",
+      "id": "mathias-mutuma",
+      "name": "Mathias Mutuma",
+      "title": "Operations Manager – Kenya",
+      "photo": "mutuma.jpeg",
+      "description": "As Operations Manager for AgroInternational Pty Ltd in Kenya, Mathias Mutuma oversees daily operations, product sourcing, quality control, licensing and certification compliance, and stakeholder engagement. He works closely with farmers, suppliers, and partners to ensure efficient operations and the consistent supply of high-quality agricultural products.",
       "responsibilities": [
-        "Product quality inspections",
-        "Certification management (Organic, Fairtrade, HACCP)",
-        "Regulatory compliance",
-        "Quality documentation and reporting"
+        "Managing day-to-day business operations",
+        "Sourcing agricultural products",
+        "Conducting quality control inspections",
+        "Coordinating licensing and certification requirements",
+        "Engaging farmers and producer groups",
+        "Building supplier and stakeholder relationships",
+        "Supporting procurement and logistics activities"
+      ],
+      "expertise": [
+        "Operations Management",
+        "Product Sourcing",
+        "Quality Control & Assurance",
+        "Licensing & Certification Compliance",
+        "Farmer & Supplier Relations",
+        "Agricultural Supply Chains",
+        "Procurement & Logistics Coordination",
+        "Business Development & Partnerships"
       ]
     }
   ]

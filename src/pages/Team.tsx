@@ -10,18 +10,18 @@ import teamData from "@/data/team.json";
 
 // Static imports — Vite cannot resolve asset paths dynamically at runtime.
 // Add a new import + entry in photoMap whenever a member is added to team.json.
-import ceoPhoto from "@/assets/team/ceo.jpg";
-import joeChanPhoto from "@/assets/team/joe-chan.jpg";
-import derrickWakilPhoto from "@/assets/team/derrick-wakil.jpg";
-import lorettaNdwalaPhoto from "@/assets/team/loretta-ndwala.jpg";
-import mathiasMutumaPhoto from "@/assets/team/mathias-mutuma.jpg";
+import abdallahPhoto from "@/assets/team/abdallah.jpeg";
+import chanPhoto from "@/assets/team/chan.jpeg";
+import wakilPhoto from "@/assets/team/wakil.jpeg";
+import lorettaPhoto from "@/assets/team/loretta.jpeg";
+import mutumaPhoto from "@/assets/team/mutuma.jpeg";
 
 const photoMap: Record<string, string> = {
-  "ceo.jpg": ceoPhoto,
-  "joe-chan.jpg": joeChanPhoto,
-  "derrick-wakil.jpg": derrickWakilPhoto,
-  "loretta-ndwala.jpg": lorettaNdwalaPhoto,
-  "mathias-mutuma.jpg": mathiasMutumaPhoto,
+  "abdallah.jpeg": abdallahPhoto,
+  "chan.jpeg": chanPhoto,
+  "wakil.jpeg": wakilPhoto,
+  "loretta.jpeg": lorettaPhoto,
+  "mutuma.jpeg": mutumaPhoto,
 };
 
 const Team = () => {
