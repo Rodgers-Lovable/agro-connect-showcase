@@ -15,6 +15,8 @@ import chanPhoto from "@/assets/team/chan.jpeg";
 import wakilPhoto from "@/assets/team/wakil.jpeg";
 import lorettaPhoto from "@/assets/team/loretta.jpeg";
 import mutumaPhoto from "@/assets/team/mutuma.jpeg";
+import andrewPhoto from "@/assets/team/andrew.jpeg";
+import cheungPhoto from "@/assets/team/cheung.png";
 
 const photoMap: Record<string, string> = {
   "abdallah.jpeg": abdallahPhoto,
@@ -22,6 +24,8 @@ const photoMap: Record<string, string> = {
   "wakil.jpeg": wakilPhoto,
   "loretta.jpeg": lorettaPhoto,
   "mutuma.jpeg": mutumaPhoto,
+  "cheung.png": cheungPhoto,
+  "andrew.jpeg": andrewPhoto,
 };
 
 const Team = () => {
@@ -31,7 +35,9 @@ const Team = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Helmet>
-        <title>Our Team - AgroInternational | The People Behind Our Mission</title>
+        <title>
+          Our Team - AgroInternational | The People Behind Our Mission
+        </title>
         <meta
           name="description"
           content="Meet the AgroInternational team — the dedicated professionals driving our mission to connect premium agro-products with global markets."
@@ -56,7 +62,6 @@ const Team = () => {
       {/* Team Hierarchy */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4 max-w-5xl">
-
           {/* Founder — centered, prominent */}
           <div className="flex justify-center mb-4">
             <div className="w-64">
@@ -77,7 +82,7 @@ const Team = () => {
           </div>
 
           {/* Team members — 4-col grid */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-6">
             {members.map((member) => (
               <TeamCard
                 key={member.id}
@@ -93,12 +98,13 @@ const Team = () => {
       {/* Member Modal */}
       <Dialog
         open={!!selectedMember}
-        onOpenChange={(open) => { if (!open) setSelectedMember(null); }}
+        onOpenChange={(open) => {
+          if (!open) setSelectedMember(null);
+        }}
       >
         <DialogContent className="max-w-[70vw] p-0 overflow-hidden">
           {selectedMember && (
             <div className="p-8 overflow-y-auto max-h-[85vh]">
-
               {/* Avatar + name/title */}
               <div className="flex items-center gap-6 mb-6">
                 <div className="w-24 h-24 rounded-full overflow-hidden flex-shrink-0 ring-4 ring-accent/20">
@@ -127,37 +133,42 @@ const Team = () => {
 
               {/* Expertise + Responsibilities side by side */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                <div>
-                  <h3 className="font-montserrat font-semibold text-sm uppercase tracking-wider text-muted-foreground mb-4">
-                    Expertise
-                  </h3>
-                  <div className="flex flex-wrap gap-2">
-                    {selectedMember.expertise.map((item, i) => (
-                      <span
-                        key={i}
-                        className="font-lato text-xs px-3 py-1.5 rounded-full bg-accent/10 text-accent border border-accent/20"
-                      >
-                        {item}
-                      </span>
-                    ))}
+                {selectedMember.expertise.length > 0 && (
+                  <div>
+                    <h3 className="font-montserrat font-semibold text-sm uppercase tracking-wider text-muted-foreground mb-4">
+                      Expertise
+                    </h3>
+                    <div className="flex flex-wrap gap-2">
+                      {selectedMember.expertise.map((item, i) => (
+                        <span
+                          key={i}
+                          className="font-lato text-xs px-3 py-1.5 rounded-full bg-accent/10 text-accent border border-accent/20"
+                        >
+                          {item}
+                        </span>
+                      ))}
+                    </div>
                   </div>
-                </div>
+                )}
 
-                <div>
-                  <h3 className="font-montserrat font-semibold text-sm uppercase tracking-wider text-muted-foreground mb-4">
-                    Responsibilities
-                  </h3>
-                  <ul className="space-y-2">
-                    {selectedMember.responsibilities.map((item, i) => (
-                      <li key={i} className="flex items-start gap-2">
-                        <CheckCircle2 className="h-4 w-4 text-accent flex-shrink-0 mt-0.5" />
-                        <span className="font-lato text-foreground/80 text-sm">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                {selectedMember.responsibilities.length > 0 && (
+                  <div>
+                    <h3 className="font-montserrat font-semibold text-sm uppercase tracking-wider text-muted-foreground mb-4">
+                      Responsibilities
+                    </h3>
+                    <ul className="space-y-2">
+                      {selectedMember.responsibilities.map((item, i) => (
+                        <li key={i} className="flex items-start gap-2">
+                          <CheckCircle2 className="h-4 w-4 text-accent flex-shrink-0 mt-0.5" />
+                          <span className="font-lato text-foreground/80 text-sm">
+                            {item}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
               </div>
-
             </div>
           )}
         </DialogContent>

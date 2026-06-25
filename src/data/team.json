@@ -102,29 +102,47 @@
       ]
     },
     {
-      "id": "mathias-mutuma",
-      "name": "Mathias Mutuma",
-      "title": "Operations Manager – Kenya",
-      "photo": "mutuma.jpeg",
-      "description": "As Operations Manager for AgroInternational Pty Ltd in Kenya, Mathias Mutuma oversees daily operations, product sourcing, quality control, licensing and certification compliance, and stakeholder engagement. He works closely with farmers, suppliers, and partners to ensure efficient operations and the consistent supply of high-quality agricultural products.",
-      "responsibilities": [
-        "Managing day-to-day business operations",
-        "Sourcing agricultural products",
-        "Conducting quality control inspections",
-        "Coordinating licensing and certification requirements",
-        "Engaging farmers and producer groups",
-        "Building supplier and stakeholder relationships",
-        "Supporting procurement and logistics activities"
-      ],
+      "id": "kevin-cheung",
+      "name": "Kevin Cheung",
+      "title": "Procurement & Supply Chain Manager",
+      "photo": "cheung.png",
+      "description": "Kevin brings more than 15 years of experience in global sourcing, manufacturing, and supply chain management, connecting businesses with trusted manufacturers across China and Hong Kong. With a strong background in sales, procurement, and relationship management, he has built a reputation for delivering reliable solutions and fostering long-term partnerships. His hands-on approach ensures that every stage of the sourcing process—from supplier selection and factory audits to quality control and logistics coordination—is managed with professionalism, transparency, and attention to detail. Acting as a trusted representative on the ground, Kevin helps international businesses navigate manufacturing and supply chain operations efficiently, reducing risk, improving communication, and eliminating the need for frequent overseas travel.",
+      "responsibilities": [],
       "expertise": [
-        "Operations Management",
-        "Product Sourcing",
-        "Quality Control & Assurance",
-        "Licensing & Certification Compliance",
-        "Farmer & Supplier Relations",
-        "Agricultural Supply Chains",
-        "Procurement & Logistics Coordination",
-        "Business Development & Partnerships"
+        "Global sourcing and procurement",
+        "Supplier and factory management",
+        "Quality assurance and inspections",
+        "Supply chain and logistics coordination",
+        "Import and export operations",
+        "Supplier negotiations",
+        "Cost optimization",
+        "Manufacturing oversight",
+        "International trade",
+        "Strategic partnerships",
+        "Vendor relationship management",
+        "End-to-end sourcing solutions"
+      ]
+    },
+    {
+      "id": "andrew-tesha",
+      "name": "Andrew Tesha",
+      "title": "Representative, Agro International Tanzania",
+      "photo": "andrew.jpeg",
+      "description": "An experienced business consultant and entrepreneur with 12+ years experience in business development and brand building. Software engineer by profession, entrepreneur by vocation. Currently working on creating digital financial solutions to empower and build local African communities.",
+      "responsibilities": [],
+      "expertise": [
+        "Business development and growth strategy",
+        "Brand building and market positioning",
+        "Entrepreneurship and startup development",
+        "Software engineering and technology solutions",
+        "Digital financial services (FinTech)",
+        "Product development and innovation",
+        "Strategic partnerships and stakeholder engagement",
+        "Community empowerment initiatives",
+        "Digital transformation",
+        "Project and operations management",
+        "Market expansion across Africa",
+        "Financial inclusion and economic development"
       ]
     }
   ]
