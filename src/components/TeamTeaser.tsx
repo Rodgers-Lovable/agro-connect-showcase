@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { Users, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -16,7 +16,7 @@ const TeamTeaser = () => {
           The dedicated professionals driving our global agricultural mission
         </p>
         <Button asChild className="bg-accent text-accent-foreground hover:bg-accent/90">
-          <Link to="/team">
+          <Link href="/team">
             Meet the Team <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
         </Button>

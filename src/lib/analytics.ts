@@ -16,7 +16,7 @@ declare global {
 export const trackEvent = (event: string, data?: Record<string, unknown>): void => {
   if (typeof window !== "undefined" && window.umami) {
     window.umami.track(event, data);
-  } else if (import.meta.env.DEV) {
+  } else if (process.env.NODE_ENV !== "production") {
     console.log(`[Analytics] ${event}`, data || "");
   }
 };

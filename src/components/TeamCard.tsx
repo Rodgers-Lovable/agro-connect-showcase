@@ -1,3 +1,5 @@
+"use client";
+
 interface TeamMember {
   id: string;
   name: string;

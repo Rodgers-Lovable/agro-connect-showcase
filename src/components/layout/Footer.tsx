@@ -1,7 +1,8 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { Mail, Phone, MapPin } from "lucide-react";
 import companyData from "@/data/company.json";
-import Logo from "@/assets/logo.png";
+
+const Logo = "/assets/logo.png";
 
 const Footer = () => {
   const { company } = companyData;
@@ -41,7 +42,7 @@ const Footer = () => {
             <ul className="space-y-2 font-lato">
               <li>
                 <Link
-                  to="/"
+                  href="/"
                   className="text-primary-foreground/80 transition-colors"
                 >
                   Home
@@ -49,7 +50,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/about"
+                  href="/about"
                   className="text-primary-foreground/80 transition-colors"
                 >
                   About Us
@@ -57,7 +58,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/products"
+                  href="/products"
                   className="text-primary-foreground/80 transition-colors"
                 >
                   Products
@@ -65,7 +66,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/quality"
+                  href="/quality"
                   className="text-primary-foreground/80 transition-colors"
                 >
                   Quality Standards
@@ -73,7 +74,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/contact"
+                  href="/contact"
                   className="text-primary-foreground/80 transition-colors"
                 >
                   Contact

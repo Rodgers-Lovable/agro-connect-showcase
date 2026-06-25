@@ -64,8 +64,8 @@ export default {
         'smooth': 'var(--transition-smooth)',
       },
       fontFamily: {
-        montserrat: ['Montserrat', 'sans-serif'],
-        lato: ['Lato', 'sans-serif'],
+        montserrat: ['var(--font-montserrat)', 'Montserrat', 'sans-serif'],
+        lato: ['var(--font-lato)', 'Lato', 'sans-serif'],
       },
       borderRadius: {
         lg: "var(--radius)",

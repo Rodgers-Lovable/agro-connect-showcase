@@ -1,14 +1,18 @@
+"use client";
+
 import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { trackRequestQuote } from "@/lib/analytics";
-import Logo from "@/assets/logo.png";
+
+const Logo = "/assets/logo.png";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const location = useLocation();
+  const pathname = usePathname();
 
   const navLinks = [
     { name: "Home", path: "/" },
@@ -19,14 +23,14 @@ const Navigation = () => {
     { name: "Contact", path: "/contact" },
   ];
 
-  const isActive = (path: string) => location.pathname === path;
+  const isActive = (path: string) => pathname === path;
 
   return (
     <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border shadow-soft">
       <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-4">
+          <Link href="/" className="flex items-center space-x-4">
             <div className="relative w-[80px] overflow-hidden">
               <img
                 src={Logo}
@@ -45,7 +49,7 @@ const Navigation = () => {
             {navLinks.map((link) => (
               <Link
                 key={link.path}
-                to={link.path}
+                href={link.path}
                 className={cn(
                   "font-lato font-medium text-foreground/80 hover:text-accent transition-colors relative",
                   "after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-accent after:transition-all after:duration-300",
@@ -61,7 +65,7 @@ const Navigation = () => {
               className="bg-accent text-accent-foreground hover:bg-accent/90"
               onClick={() => trackRequestQuote("nav")}
             >
-              <Link to="/contact">Request Quote</Link>
+              <Link href="/contact">Request Quote</Link>
             </Button>
           </div>
 
@@ -82,7 +86,7 @@ const Navigation = () => {
               {navLinks.map((link) => (
                 <Link
                   key={link.path}
-                  to={link.path}
+                  href={link.path}
                   onClick={() => setIsOpen(false)}
                   className={cn(
                     "font-lato font-medium text-foreground/80 hover:text-accent transition-colors px-2 py-1",
@@ -100,7 +104,7 @@ const Navigation = () => {
                   setIsOpen(false);
                 }}
               >
-                <Link to="/contact">
+                <Link href="/contact">
                   Request Quote
                 </Link>
               </Button>

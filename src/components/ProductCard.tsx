@@ -1,4 +1,6 @@
-import { Link } from "react-router-dom";
+"use client";
+
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -13,16 +15,7 @@ interface ProductCardProps {
 }
 
 const ProductCard = ({ id, name, image, shortDescription, certifications = [] }: ProductCardProps) => {
-  const getImageSrc = () => {
-    if (!image) return null;
-    try {
-      return new URL(`../assets/products/${image}`, import.meta.url).href;
-    } catch {
-      return null;
-    }
-  };
-
-  const imageSrc = getImageSrc();
+  const imageSrc = image ? `/assets/products/${image}` : null;
 
   return (
     <Card className="group hover:shadow-medium transition-all duration-300 hover:-translate-y-1 overflow-hidden">
@@ -59,7 +52,7 @@ const ProductCard = ({ id, name, image, shortDescription, certifications = [] }:
           className="w-full group-hover:bg-accent group-hover:text-accent-foreground group-hover:border-accent transition-colors"
           onClick={() => trackProductQuoteRequest(name)}
         >
-          <Link to="/contact">Request Quote</Link>
+          <Link href="/contact">Request Quote</Link>
         </Button>
       </CardFooter>
     </Card>

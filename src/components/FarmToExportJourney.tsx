@@ -1,3 +1,5 @@
+"use client";
+
 import { useState, useEffect } from "react";
 import { MapPin, Clipboard, Search, Factory, FileText, Ship, CheckCircle } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";

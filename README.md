@@ -1,73 +1,78 @@
-# Welcome to your Lovable project
+# AgroInternational Pty Ltd
 
-## Project info
+Marketing website for AgroInternational Pty Ltd — a premium agro-products exporter
+connecting trusted producers with global markets.
 
-**URL**: https://lovable.dev/projects/feadc8eb-da73-4d6d-ac01-1d684a1c5ca6
+## Tech stack
 
-## How can I edit this code?
+- [Next.js](https://nextjs.org) (App Router)
+- TypeScript
+- Tailwind CSS
+- [shadcn/ui](https://ui.shadcn.com) (Radix UI primitives)
+- EmailJS (contact form)
+- Umami (analytics)
 
-There are several ways of editing your application.
+## Getting started
 
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/feadc8eb-da73-4d6d-ac01-1d684a1c5ca6) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+Requires Node.js 18+ and npm.
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# 1. Install dependencies
+npm install
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# 2. Create a .env file (see "Environment variables" below)
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# 3. Start the development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The site runs at http://localhost:3000.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Scripts
 
-**Use GitHub Codespaces**
+| Command         | Description                          |
+| --------------- | ------------------------------------ |
+| `npm run dev`   | Start the development server         |
+| `npm run build` | Create an optimized production build  |
+| `npm run start` | Run the production build locally      |
+| `npm run lint`  | Lint the codebase                    |
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Environment variables
 
-## What technologies are used for this project?
+The contact form uses [EmailJS](https://www.emailjs.com). Create a `.env` file in the
+project root with:
 
-This project is built with:
+```sh
+NEXT_PUBLIC_EMAILJS_SERVICE_ID=your_service_id
+NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=your_template_id
+NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=your_public_key
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+These are public client-side keys (prefixed `NEXT_PUBLIC_`). On Vercel, add the same
+variables under **Project → Settings → Environment Variables**.
 
-## How can I deploy this project?
+## Project structure
 
-Simply open [Lovable](https://lovable.dev/projects/feadc8eb-da73-4d6d-ac01-1d684a1c5ca6) and click on Share -> Publish.
+```
+src/
+  app/            App Router routes (one folder per page) + layout, sitemap
+  components/     Shared components and shadcn/ui primitives (components/ui)
+  data/           Site content as JSON (edit these to update copy)
+  hooks/          React hooks
+  lib/            Utilities, constants, analytics
+public/
+  assets/         Images (referenced by path, e.g. /assets/hero-agro.jpg)
+```
 
-## Can I connect a custom domain to my Lovable project?
+## Editing content
 
-Yes, you can!
+Most page copy, products, team members, testimonials, and certifications live as JSON
+files in [`src/data`](src/data). Edit those files to update the site — no component
+changes required. See [`docs/owner-editing-options.md`](docs/owner-editing-options.md)
+for ways to make the site editable without touching the repo.
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## Deployment
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+The site is configured for [Vercel](https://vercel.com). Push to your connected Git
+repository and Vercel builds and deploys automatically. Set the EmailJS environment
+variables in the Vercel project settings before the first production deploy.
