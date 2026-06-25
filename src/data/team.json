@@ -4,7 +4,7 @@
       "id": "abdallah-ndwala",
       "name": "Abdallah Ndwala",
       "title": "Founder & Director",
-      "photo": "abdallah.jpeg",
+      "photo": "/assets/team/abdallah.jpeg",
       "description": "Abdallah Ndwala is the Founder and Director of AgroInternational Pty Ltd, where he provides strategic leadership and oversees the company's operations, growth, and long-term development. He is responsible for establishing the company's vision, developing strategic partnerships, identifying new market opportunities, and ensuring the successful delivery of AgroInternational's objectives within the agricultural and international trade sectors. With over 16 years of senior management experience in the hospitality industry and more than 11 years of specialized experience in the coffee sector, Abdallah brings extensive expertise in business operations, customer relationship management, supply chain coordination, and agricultural product development. His strong background in hospitality and coffee production has enabled him to build valuable relationships across local and international markets, while driving operational excellence and sustainable business growth. Through his leadership, AgroInternational Pty Ltd continues to strengthen its position as a trusted partner in agricultural trade, connecting producers and buyers across global markets.",
       "responsibilities": [
         "Strategic leadership and company direction",
@@ -29,7 +29,7 @@
       "id": "joe-chan",
       "name": "Joe Chan",
       "title": "Operational Manager – Australia",
-      "photo": "chan.jpeg",
+      "photo": "/assets/team/chan.jpeg",
       "description": "As Operational Manager for Agro International in Australia, Joe oversees international trade operations, supply chain management, logistics coordination, quality assurance, and business development across global markets. With over 15 years of experience in international logistics, import/export operations, and cross-border trade, he specializes in connecting Eastern and Western markets while ensuring efficient product movement, regulatory compliance, and quality control throughout the supply chain.",
       "responsibilities": [
         "Managing end-to-end import and export operations",
@@ -55,7 +55,7 @@
       "id": "derrick-abdul-wakil",
       "name": "Derrick Abdul Wakil",
       "title": "United States Representative",
-      "photo": "wakil.jpeg",
+      "photo": "/assets/team/wakil.jpeg",
       "description": "Derrick Abdul Wakil serves as the United States Representative for Agro International Pty Ltd, focusing on African coffee, tea, herbs, and spices within the agriculture and agribusiness sector. He supports the sourcing, promotion, and international trade of African-grown products, helping connect producers with global buyers and distribution networks. He also contributes to the development of export opportunities, ensures product quality aligns with international market standards, and strengthens supply chains that bring African agricultural products to broader global markets.",
       "responsibilities": [
         "Representing Agro International in the United States",
@@ -80,7 +80,7 @@
       "id": "loretta-ndwala",
       "name": "Loretta Ndwala",
       "title": "Regional Head of Sales – Africa, Australia & Asia Pacific",
-      "photo": "loretta.jpeg",
+      "photo": "/assets/team/loretta.jpeg",
       "description": "Loretta Ndwala is a senior commercial leader driving strategic growth and market expansion across Africa, Australia, and the Asia Pacific region. She leads the execution of scalable sales strategies, forges high-value partnerships, and unlocks new market opportunities that accelerate AgroInternational’s global footprint. With a strong focus on business building, Loretta is instrumental in strengthening distribution networks, optimizing revenue performance, and positioning the company for sustained international growth and competitive advantage.",
       "responsibilities": [
         "Leading regional sales strategy",
@@ -105,7 +105,7 @@
       "id": "kevin-cheung",
       "name": "Kevin Cheung",
       "title": "Procurement & Supply Chain Manager",
-      "photo": "cheung.png",
+      "photo": "/assets/team/cheung.png",
       "description": "Kevin brings more than 15 years of experience in global sourcing, manufacturing, and supply chain management, connecting businesses with trusted manufacturers across China and Hong Kong. With a strong background in sales, procurement, and relationship management, he has built a reputation for delivering reliable solutions and fostering long-term partnerships. His hands-on approach ensures that every stage of the sourcing process—from supplier selection and factory audits to quality control and logistics coordination—is managed with professionalism, transparency, and attention to detail. Acting as a trusted representative on the ground, Kevin helps international businesses navigate manufacturing and supply chain operations efficiently, reducing risk, improving communication, and eliminating the need for frequent overseas travel.",
       "responsibilities": [],
       "expertise": [
@@ -127,7 +127,7 @@
       "id": "andrew-tesha",
       "name": "Andrew Tesha",
       "title": "Representative, Agro International Tanzania",
-      "photo": "andrew.jpeg",
+      "photo": "/assets/team/andrew.jpeg",
       "description": "An experienced business consultant and entrepreneur with 12+ years experience in business development and brand building. Software engineer by profession, entrepreneur by vocation. Currently working on creating digital financial solutions to empower and build local African communities.",
       "responsibilities": [],
       "expertise": [

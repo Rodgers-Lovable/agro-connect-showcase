@@ -15,7 +15,7 @@ interface ProductCardProps {
 }
 
 const ProductCard = ({ id, name, image, shortDescription, certifications = [] }: ProductCardProps) => {
-  const imageSrc = image ? `/assets/products/${image}` : null;
+  const imageSrc = image || null;
 
   return (
     <Card className="group hover:shadow-medium transition-all duration-300 hover:-translate-y-1 overflow-hidden">

@@ -231,7 +231,7 @@ const QualityView = () => {
               >
                 <div className="relative h-[300px] overflow-hidden">
                   <img
-                    src={`/assets/${item.image}`}
+                    src={item.image}
                     alt={item.alt}
                     className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
                   />

@@ -8,7 +8,8 @@ import { Dialog, DialogContent } from "@/components/ui/dialog";
 import TeamCard, { type TeamMember } from "@/components/TeamCard";
 import teamData from "@/data/team.json";
 
-const photoSrc = (photo: string) => `/assets/team/${photo}`;
+// `photo` is stored as a full media path (e.g. /assets/team/abdallah.jpeg) by TinaCMS.
+const photoSrc = (photo: string) => photo;
 
 const TeamView = () => {
   const [selectedMember, setSelectedMember] = useState<TeamMember | null>(null);

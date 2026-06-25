@@ -176,9 +176,9 @@ export default defineConfig({
                 label: "Category ID (must match a category)",
               },
               {
-                type: "string",
+                type: "image",
                 name: "image",
-                label: "Image filename (in public/assets/products)",
+                label: "Image",
               },
               {
                 type: "string",
@@ -445,9 +445,9 @@ export default defineConfig({
             fields: [
               { type: "number", name: "itemId", nameOverride: "id", label: "ID" },
               {
-                type: "string",
+                type: "image",
                 name: "image",
-                label: "Image filename (in public/assets)",
+                label: "Image",
               },
               { type: "string", name: "caption", label: "Caption" },
               { type: "string", name: "alt", label: "Alt text" },
@@ -538,9 +538,9 @@ export default defineConfig({
               { type: "string", name: "name", label: "Name" },
               { type: "string", name: "title", label: "Title" },
               {
-                type: "string",
+                type: "image",
                 name: "photo",
-                label: "Photo filename (in public/assets/team)",
+                label: "Photo",
               },
               {
                 type: "string",
