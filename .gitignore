@@ -17,6 +17,11 @@ dist-ssr
 out/
 next-env.d.ts
 .vercel
+*.tsbuildinfo
+
+# TinaCMS (generated)
+tina/__generated__/
+public/admin/
 
 # Editor directories and files
 .vscode/*

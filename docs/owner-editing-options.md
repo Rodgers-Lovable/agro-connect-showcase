@@ -1,5 +1,10 @@
 # Making the site owner-editable
 
+> **Status:** Option 2 (TinaCMS, Tina Cloud backend) has been implemented. See
+> [tinacms-setup.md](tinacms-setup.md) for the setup and editing guide. The comparison
+> below is kept for reference.
+
+
 This site is now a **Next.js** app hosted on **Vercel**. All of the page content —
 copy, products, team members, testimonials, certifications, FAQs, etc. — lives as JSON
 files in [`src/data`](../src/data). Whenever those files change in the Git repository,
