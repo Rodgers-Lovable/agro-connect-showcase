@@ -33,12 +33,12 @@ import featuresData from "@/data/features.json";
 import testimonialsData from "@/data/testimonials.json";
 import faqData from "@/data/faq.json";
 import { DOMAIN } from "@/lib/constants";
-import { 
-  trackViewProducts, 
-  trackRequestQuote, 
-  trackLearnMore, 
-  trackExploreProducts, 
-  trackFaqExpand 
+import {
+  trackViewProducts,
+  trackRequestQuote,
+  trackLearnMore,
+  trackExploreProducts,
+  trackFaqExpand,
 } from "@/lib/analytics";
 
 const Home = () => {
@@ -174,13 +174,15 @@ const Home = () => {
                 Who We Are
               </h2>
               <p className="font-lato text-lg text-foreground mb-6 leading-relaxed">
-                AgroInternational Pty Ltd is a leading exporter of high-quality
-                agro-products from Australia. We connect global markets with
-                premium produce sourced from sustainable farms.
+                AgroInternational Pty Ltd is an international trading company
+                connecting trusted producers with global markets. We work across
+                Australia, China, Asia, and the Oceania region, building
+                reliable supply chains and long-term trade partnerships.
               </p>
               <p className="font-lato text-lg text-foreground mb-8 leading-relaxed">
-                Our mission is to deliver quality, consistency, and trust — from
-                farm to market.
+                Our commitment to quality, reliability, and sustainable sourcing
+                ensures we deliver products that meet international standards
+                and market expectations.
               </p>
               <Button
                 asChild
@@ -323,10 +325,10 @@ const Home = () => {
                 feature.icon === "Globe"
                   ? Globe
                   : feature.icon === "Leaf"
-                  ? Leaf
-                  : feature.icon === "Shield"
-                  ? Shield
-                  : Truck;
+                    ? Leaf
+                    : feature.icon === "Shield"
+                      ? Shield
+                      : Truck;
               const isEven = index % 2 === 0;
 
               return (
@@ -445,7 +447,7 @@ const Home = () => {
             <Accordion type="single" collapsible className="w-full">
               {faq.map((item) => (
                 <AccordionItem key={item.id} value={`item-${item.id}`}>
-                  <AccordionTrigger 
+                  <AccordionTrigger
                     className="font-montserrat font-semibold text-lg text-left"
                     onClick={() => trackFaqExpand(item.question)}
                   >
