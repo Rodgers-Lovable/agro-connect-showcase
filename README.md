@@ -33,8 +33,8 @@ The site runs at http://localhost:3000.
 | Command         | Description                          |
 | --------------- | ------------------------------------ |
 | `npm run dev`   | Start the development server         |
-| `npm run build` | Create an optimized production build  |
-| `npm run start` | Run the production build locally      |
+| `npm run build` | Create an optimized production build |
+| `npm run start` | Run the production build locally     |
 | `npm run lint`  | Lint the codebase                    |
 
 ## Environment variables

@@ -4,7 +4,6 @@
 > [tinacms-setup.md](tinacms-setup.md) for the setup and editing guide. The comparison
 > below is kept for reference.
 
-
 This site is now a **Next.js** app hosted on **Vercel**. All of the page content —
 copy, products, team members, testimonials, certifications, FAQs, etc. — lives as JSON
 files in [`src/data`](../src/data). Whenever those files change in the Git repository,
@@ -14,8 +13,8 @@ That single fact is the key: **"editing the site" means changing the files in
 `src/data` and letting Vercel redeploy.** Every option below is just a different,
 friendlier way to do that — from raw file editing up to a full visual dashboard.
 
-The options are ordered from least to most effort. Given the owner is *somewhat
-technical* (comfortable with a web admin panel, but not editing code in a repo), the
+The options are ordered from least to most effort. Given the owner is _somewhat
+technical_ (comfortable with a web admin panel, but not editing code in a repo), the
 recommendation is **Option 2 (a Git-based CMS, TinaCMS)**, with Option 1 as a zero-cost
 fallback and Option 3 if a fully decoupled, non-technical dashboard is wanted later.
 
@@ -41,7 +40,7 @@ pencil icon on any file). Committing the change triggers a Vercel deploy automat
 
 ---
 
-## Option 2 — Git-based CMS with an admin panel  ✅ Recommended
+## Option 2 — Git-based CMS with an admin panel ✅ Recommended
 
 A Git-based CMS adds a friendly admin UI (forms, rich-text fields, image uploads) that
 reads and writes the **same files already in the repo**. The owner logs in, edits in a
@@ -84,11 +83,11 @@ on demand. This fully separates content from code — the owner never touches th
 
 ### Leading choices
 
-| CMS | Notes |
-| --- | --- |
-| [Sanity](https://www.sanity.io) | Excellent free tier, highly structured content, polished "Studio" editor. Strong fit. |
-| [Storyblok](https://www.storyblok.com) | Visual, click-on-the-page editing — most approachable for non-technical users. |
-| [Contentful](https://www.contentful.com) | Mature, enterprise-friendly; free tier is more limited. |
+| CMS                                      | Notes                                                                                 |
+| ---------------------------------------- | ------------------------------------------------------------------------------------- |
+| [Sanity](https://www.sanity.io)          | Excellent free tier, highly structured content, polished "Studio" editor. Strong fit. |
+| [Storyblok](https://www.storyblok.com)   | Visual, click-on-the-page editing — most approachable for non-technical users.        |
+| [Contentful](https://www.contentful.com) | Mature, enterprise-friendly; free tier is more limited.                               |
 
 - **Cost:** free tiers exist; cost grows with content/users/API usage
 - **Editor experience:** best-in-class dashboards, roles/permissions, scheduled publishing
@@ -105,11 +104,11 @@ or features like scheduled publishing and granular permissions are needed.
 
 ## Recommendation summary
 
-| Need | Best option |
-| --- | --- |
-| Cheapest, occasional edits, owner OK with care | **Option 1** — GitHub web editor |
-| Friendly dashboard, keep it simple & cheap (current fit) | **Option 2** — TinaCMS (or Decap for $0) |
-| Polished, fully non-technical, multi-editor, future-proof | **Option 3** — Sanity / Storyblok |
+| Need                                                      | Best option                              |
+| --------------------------------------------------------- | ---------------------------------------- |
+| Cheapest, occasional edits, owner OK with care            | **Option 1** — GitHub web editor         |
+| Friendly dashboard, keep it simple & cheap (current fit)  | **Option 2** — TinaCMS (or Decap for $0) |
+| Polished, fully non-technical, multi-editor, future-proof | **Option 3** — Sanity / Storyblok        |
 
 A sensible path: **start with Option 1 today** (it already works), and **adopt
 TinaCMS (Option 2)** when hands-off editing is wanted. Moving to a hosted CMS later is
