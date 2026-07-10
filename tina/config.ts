@@ -456,6 +456,49 @@ export default defineConfig({
         ],
       },
 
+      // ---- Gallery ----
+      {
+        name: "gallery",
+        label: "Gallery",
+        ...singleton("gallery"),
+        fields: [
+          {
+            type: "object",
+            name: "sections",
+            label: "Sections",
+            list: true,
+            ui: { itemProps: (i: any) => ({ label: i?.title }) },
+            fields: [
+              { type: "string", name: "sectionId", nameOverride: "id", label: "ID" },
+              { type: "string", name: "title", label: "Title" },
+              {
+                type: "string",
+                name: "description",
+                label: "Description",
+                ui: { component: "textarea" },
+              },
+              {
+                type: "object",
+                name: "items",
+                label: "Photos",
+                list: true,
+                ui: { itemProps: (i: any) => ({ label: i?.caption }) },
+                fields: [
+                  { type: "number", name: "itemId", nameOverride: "id", label: "ID" },
+                  {
+                    type: "image",
+                    name: "image",
+                    label: "Image",
+                  },
+                  { type: "string", name: "caption", label: "Caption" },
+                  { type: "string", name: "alt", label: "Alt text" },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+
       // ---- Partnerships ----
       {
         name: "partnerships",

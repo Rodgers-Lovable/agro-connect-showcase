@@ -74,6 +74,14 @@ const Footer = () => {
               </li>
               <li>
                 <Link
+                  href="/gallery"
+                  className="text-primary-foreground/80 transition-colors"
+                >
+                  Gallery
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/contact"
                   className="text-primary-foreground/80 transition-colors"
                 >

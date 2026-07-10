@@ -1,0 +1,122 @@
+{
+  "sections": [
+    {
+      "id": "farms",
+      "title": "Farms & Sourcing",
+      "description": "Where it all begins — the growers and regions behind our produce.",
+      "items": [
+        {
+          "id": 1,
+          "image": "/assets/about-farmers.jpg",
+          "caption": "Partnering directly with smallholder farmers",
+          "alt": "Farmers tending their crops in the field"
+        },
+        {
+          "id": 2,
+          "image": "/assets/about-overview.jpg",
+          "caption": "Sourcing from carefully selected growing regions",
+          "alt": "Aerial overview of agricultural farmland"
+        },
+        {
+          "id": 3,
+          "image": "/assets/sustainability.jpg",
+          "caption": "Sustainable farming at the heart of what we do",
+          "alt": "Sustainable farming landscape"
+        }
+      ]
+    },
+    {
+      "id": "products",
+      "title": "Our Products",
+      "description": "A glimpse of the premium coffee, tea, spices, nuts and seeds we export.",
+      "items": [
+        {
+          "id": 1,
+          "image": "/assets/products/coffee.jpg",
+          "caption": "Premium green and roasted coffee beans",
+          "alt": "Close-up of premium coffee beans"
+        },
+        {
+          "id": 2,
+          "image": "/assets/products/tea.jpg",
+          "caption": "Freshly picked, expertly graded tea",
+          "alt": "Loose-leaf tea"
+        },
+        {
+          "id": 3,
+          "image": "/assets/products/cardamom.jpg",
+          "caption": "Aromatic whole cardamom pods",
+          "alt": "Green cardamom pods"
+        },
+        {
+          "id": 4,
+          "image": "/assets/products/macadamia.jpg",
+          "caption": "Rich, hand-selected macadamia nuts",
+          "alt": "Macadamia nuts"
+        },
+        {
+          "id": 5,
+          "image": "/assets/products/sesame.jpg",
+          "caption": "Clean, high-oil sesame seeds",
+          "alt": "Sesame seeds"
+        },
+        {
+          "id": 6,
+          "image": "/assets/products/turmeric.jpg",
+          "caption": "Vibrant, high-curcumin turmeric",
+          "alt": "Turmeric roots and powder"
+        }
+      ]
+    },
+    {
+      "id": "processing",
+      "title": "Processing & Quality",
+      "description": "Rigorous grading, testing and packaging that safeguard every shipment.",
+      "items": [
+        {
+          "id": 1,
+          "image": "/assets/grading.jpg",
+          "caption": "Hand-grading for consistent, premium quality",
+          "alt": "Workers grading agricultural produce"
+        },
+        {
+          "id": 2,
+          "image": "/assets/lab-testing.jpg",
+          "caption": "Laboratory testing for safety and compliance",
+          "alt": "Laboratory quality testing of produce"
+        },
+        {
+          "id": 3,
+          "image": "/assets/quality-inspection.jpg",
+          "caption": "Meticulous quality inspection at every stage",
+          "alt": "Quality inspector examining produce"
+        },
+        {
+          "id": 4,
+          "image": "/assets/packaging.jpg",
+          "caption": "Export-grade packaging built to protect freshness",
+          "alt": "Packaging of agricultural products for export"
+        }
+      ]
+    },
+    {
+      "id": "logistics",
+      "title": "Logistics & Export",
+      "description": "Reliable handling and shipping that connect our farms to global markets.",
+      "items": [
+        {
+          "id": 1,
+          "image": "/assets/logistics.jpg",
+          "caption": "Streamlined logistics from warehouse to port",
+          "alt": "Logistics and freight handling operations"
+        },
+        {
+          "id": 2,
+          "image": "/assets/global-reach.jpg",
+          "caption": "Delivering to markets across the globe",
+          "alt": "Global shipping and export network"
+        }
+      ]
+    }
+  ]
+}
