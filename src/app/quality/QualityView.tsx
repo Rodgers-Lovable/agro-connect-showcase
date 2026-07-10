@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
 import { Card, CardContent } from "@/components/ui/card";
@@ -47,12 +48,15 @@ const QualityView = () => {
 
       {/* Hero Section */}
       <section className="relative h-[500px] flex items-center justify-center overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${qualityHeroImage})` }}
-        >
-          <div className="absolute inset-0 bg-gradient-hero"></div>
-        </div>
+        <Image
+          src={qualityHeroImage}
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-hero"></div>
 
         <div className="relative z-10 container mx-auto px-4 text-center text-primary-foreground">
           <h1 className="font-montserrat font-bold text-5xl md:text-6xl mb-6">
@@ -146,10 +150,15 @@ const QualityView = () => {
 
       {/* Interactive Farm-to-Export Journey */}
       <section className="py-20 bg-primary text-primary-foreground relative overflow-hidden">
-        <div
-          className="absolute inset-0 opacity-10 bg-cover bg-center"
-          style={{ backgroundImage: `url(${logisticsImage})` }}
-        ></div>
+        <div className="absolute inset-0 opacity-10">
+          <Image
+            src={logisticsImage}
+            alt=""
+            fill
+            sizes="100vw"
+            className="object-cover"
+          />
+        </div>
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
@@ -169,10 +178,15 @@ const QualityView = () => {
 
       {/* Sustainable Farming Practices */}
       <section className="py-20 bg-background relative overflow-hidden">
-        <div
-          className="absolute inset-0 opacity-[0.2] bg-cover bg-center"
-          style={{ backgroundImage: `url(${sustainabilityImage})` }}
-        ></div>
+        <div className="absolute inset-0 opacity-[0.2]">
+          <Image
+            src={sustainabilityImage}
+            alt=""
+            fill
+            sizes="100vw"
+            className="object-cover"
+          />
+        </div>
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
@@ -230,10 +244,12 @@ const QualityView = () => {
                 style={{ animationDelay: `${index * 150}ms` }}
               >
                 <div className="relative h-[300px] overflow-hidden">
-                  <img
+                  <Image
                     src={item.image}
                     alt={item.alt}
-                    className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover transform group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">

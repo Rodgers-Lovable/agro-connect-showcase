@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Mail, Phone, MapPin } from "lucide-react";
 import companyData from "@/data/company.json";
 
@@ -15,10 +16,13 @@ const Footer = () => {
 
           <div className="space-y-4">
             <div className="relative w-[100px] lg:w-[150px] overflow-hidden">
-              <img
+              <Image
                 src={Logo}
                 alt="AgroInternational Pty Ltd logo"
-                className="w-full h-full object-cover"
+                width={150}
+                height={150}
+                sizes="150px"
+                className="w-full h-auto object-contain"
               />
             </div>
             <h3 className="font-montserrat font-bold text-xl">

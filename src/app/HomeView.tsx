@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import {
   ArrowRight,
@@ -53,12 +54,15 @@ const HomeView = () => {
 
       {/* Hero Section */}
       <section className="relative h-[600px] flex items-center justify-center overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${heroImage})` }}
-        >
-          <div className="absolute inset-0 bg-gradient-hero"></div>
-        </div>
+        <Image
+          src={heroImage}
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-hero"></div>
 
         <div className="relative z-10 container mx-auto px-4 text-center text-primary-foreground">
           <h1 className="font-montserrat font-bold text-5xl md:text-6xl lg:text-7xl mb-6">
@@ -125,10 +129,12 @@ const HomeView = () => {
               </Button>
             </div>
             <div className="relative h-[400px] lg:h-[500px] rounded-lg overflow-hidden shadow-xl">
-              <img
+              <Image
                 src={aboutImage}
                 alt="Farmers sorting premium coffee beans for export from Australia"
-                className="w-full h-full object-cover"
+                fill
+                sizes="(max-width: 1024px) 100vw, 600px"
+                className="object-cover"
               />
             </div>
           </div>
@@ -233,10 +239,15 @@ const HomeView = () => {
 
       {/* Why Choose Us */}
       <section className="py-20 bg-background relative overflow-hidden bg-white">
-        <div
-          className="absolute inset-0 opacity-[0.03] bg-cover bg-center"
-          style={{ backgroundImage: `url(${logisticsImage})` }}
-        ></div>
+        <div className="absolute inset-0 opacity-[0.03]">
+          <Image
+            src={logisticsImage}
+            alt=""
+            fill
+            sizes="100vw"
+            className="object-cover"
+          />
+        </div>
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-20">
@@ -338,10 +349,15 @@ const HomeView = () => {
 
       {/* Global Reach */}
       <section className="py-20 bg-primary text-primary-foreground relative overflow-hidden">
-        <div
-          className="absolute inset-0 opacity-20 bg-cover bg-center"
-          style={{ backgroundImage: `url(${globalReachImage})` }}
-        ></div>
+        <div className="absolute inset-0 opacity-20">
+          <Image
+            src={globalReachImage}
+            alt=""
+            fill
+            sizes="100vw"
+            className="object-cover"
+          />
+        </div>
         <div className="container mx-auto px-4 relative z-10 text-center">
           <h2 className="font-montserrat font-bold text-4xl md:text-5xl mb-6">
             Our Global Reach

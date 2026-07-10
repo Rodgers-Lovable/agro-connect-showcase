@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
 import {
@@ -67,10 +68,12 @@ const GalleryView = () => {
                   className="relative group overflow-hidden rounded-xl shadow-lg cursor-pointer text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
                 >
                   <div className="relative h-[300px] overflow-hidden">
-                    <img
+                    <Image
                       src={item.image}
                       alt={item.alt}
-                      className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      className="object-cover transform group-hover:scale-110 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">

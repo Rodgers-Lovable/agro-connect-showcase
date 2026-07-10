@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -33,10 +34,14 @@ const Navigation = () => {
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-4">
             <div className="relative w-[80px] overflow-hidden">
-              <img
+              <Image
                 src={Logo}
                 alt="AgroInternational Pty Ltd logo"
-                className="w-full h-full object-cover"
+                width={80}
+                height={80}
+                priority
+                sizes="80px"
+                className="w-full h-auto object-contain"
               />
             </div>
 

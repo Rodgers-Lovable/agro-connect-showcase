@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
 import { Button } from "@/components/ui/button";
@@ -47,12 +48,15 @@ const AboutView = () => {
 
       {/* Hero Section */}
       <section className="relative h-[500px] md:h-[600px] flex items-center justify-center overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: `url(${heroImage})` }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-primary/50"></div>
-        </div>
+        <Image
+          src={heroImage}
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-primary/50"></div>
 
         <div className="relative z-10 container mx-auto px-4 text-center text-primary-foreground">
           <h1 className="font-montserrat font-bold text-4xl md:text-6xl mb-6 animate-fade-in">
@@ -112,10 +116,12 @@ const AboutView = () => {
               </div>
             </div>
             <div className="relative h-[400px] lg:h-[500px] rounded-xl overflow-hidden shadow-2xl">
-              <img
+              <Image
                 src={overviewImage}
                 alt="Agricultural diversity and farming excellence at AgroInternational"
-                className="w-full h-full object-cover"
+                fill
+                sizes="(max-width: 1024px) 100vw, 600px"
+                className="object-cover"
               />
             </div>
           </div>
@@ -253,10 +259,12 @@ const AboutView = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
               <div className="md:col-span-1 flex justify-center">
                 <div className="relative w-72 h-64 rounded-2xl overflow-hidden shadow-2xl">
-                  <img
+                  <Image
                     src={ceoImage}
                     alt="Abdallah Ndwala, CEO of AgroInternational Pty Ltd"
-                    className="w-full h-full object-cover"
+                    fill
+                    sizes="288px"
+                    className="object-cover"
                   />
                 </div>
               </div>
@@ -292,10 +300,15 @@ const AboutView = () => {
 
       {/* Sustainability & Impact */}
       <section className="py-20 bg-background relative overflow-hidden">
-        <div
-          className="absolute inset-0 opacity-10 bg-cover bg-center"
-          style={{ backgroundImage: `url(${sustainabilityImage})` }}
-        ></div>
+        <div className="absolute inset-0 opacity-10">
+          <Image
+            src={sustainabilityImage}
+            alt=""
+            fill
+            sizes="100vw"
+            className="object-cover"
+          />
+        </div>
 
         <div className="container mx-auto px-4 relative z-10">
           <div className="text-center mb-16">

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { CheckCircle2 } from "lucide-react";
 import Navigation from "@/components/layout/Navigation";
 import Footer from "@/components/layout/Footer";
@@ -79,11 +80,13 @@ const TeamView = () => {
             <div className="p-8 overflow-y-auto max-h-[85vh]">
               {/* Avatar + name/title */}
               <div className="flex items-center gap-6 mb-6">
-                <div className="w-24 h-24 rounded-full overflow-hidden flex-shrink-0 ring-4 ring-accent/20">
-                  <img
+                <div className="relative w-24 h-24 rounded-full overflow-hidden flex-shrink-0 ring-4 ring-accent/20">
+                  <Image
                     src={photoSrc(selectedMember.photo)}
                     alt={`${selectedMember.name}, ${selectedMember.title}`}
-                    className="w-full h-full object-cover"
+                    fill
+                    sizes="96px"
+                    className="object-cover"
                   />
                 </div>
                 <div>

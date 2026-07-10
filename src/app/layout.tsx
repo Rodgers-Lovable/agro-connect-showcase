@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Montserrat, Lato } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
+
 import { Providers } from "./providers";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
@@ -17,7 +18,7 @@ const montserrat = Montserrat({
 
 const lato = Lato({
   subsets: ["latin"],
-  weight: ["300", "400", "700"],
+  weight: ["400", "700"],
   variable: "--font-lato",
   display: "swap",
 });

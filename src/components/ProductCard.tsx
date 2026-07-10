@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -20,11 +21,13 @@ const ProductCard = ({ id, name, image, shortDescription, certifications = [] }:
   return (
     <Card className="group hover:shadow-medium transition-all duration-300 hover:-translate-y-1 overflow-hidden">
       {imageSrc && (
-        <div className="aspect-square overflow-hidden bg-muted">
-          <img 
-            src={imageSrc} 
+        <div className="relative aspect-square overflow-hidden bg-muted">
+          <Image
+            src={imageSrc}
             alt={name}
-            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
+            className="object-cover group-hover:scale-105 transition-transform duration-300"
           />
         </div>
       )}

@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 interface TeamMember {
   id: string;
   name: string;
@@ -22,11 +24,13 @@ const TeamCard = ({ member, photoSrc, onSelect }: TeamCardProps) => {
       onClick={() => onSelect(member)}
       className="group w-full text-left rounded-xl overflow-hidden border border-border/50 hover:border-accent/50 hover:shadow-lg transition-all bg-background"
     >
-      <div className="aspect-[3/4] overflow-hidden">
-        <img
+      <div className="relative aspect-[3/4] overflow-hidden">
+        <Image
           src={photoSrc}
           alt={`${member.name}, ${member.title}`}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          fill
+          sizes="(max-width: 768px) 50vw, 300px"
+          className="object-cover group-hover:scale-105 transition-transform duration-300"
         />
       </div>
       <div className="p-5 text-center">
