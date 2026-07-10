@@ -26,6 +26,28 @@
       ]
     },
     {
+      "id": "andrew-tesha",
+      "name": "Andrew Tesha",
+      "title": "Regional Head of Strategy and Operations for Africa",
+      "photo": "/assets/Andrew-Tesha.jpeg",
+      "description": "In this role, Andrew leads regional growth initiatives, business development, market positioning, and strategic partnerships across key African markets. With more than 12 years of experience in entrepreneurship, brand development, and technology-driven solutions, Andrew plays a central role in strengthening Agro International’s presence and operational impact across the continent. He also maintains strong relationships with farmer networks, particularly in Tanzania, helping to build reliable supplier channels, support local agricultural communities, and promote sustainable, inclusive growth",
+      "responsibilities": [],
+      "expertise": [
+        "Business development and growth strategy",
+        "Brand building and market positioning",
+        "Entrepreneurship and startup development",
+        "Software engineering and technology solutions",
+        "Digital financial services (FinTech)",
+        "Product development and innovation",
+        "Strategic partnerships and stakeholder engagement",
+        "Community empowerment initiatives",
+        "Digital transformation",
+        "Project and operations management",
+        "Market expansion across Africa",
+        "Financial inclusion and economic development"
+      ]
+    },
+    {
       "id": "joe-chan",
       "name": "Joe Chan",
       "title": "Operational Manager – Australia",
@@ -124,25 +146,29 @@
       ]
     },
     {
-      "id": "andrew-tesha",
-      "name": "Andrew Tesha",
-      "title": "Representative, Agro International Tanzania",
-      "photo": "/assets/team/andrew.jpeg",
-      "description": "An experienced business consultant and entrepreneur with 12+ years experience in business development and brand building. Software engineer by profession, entrepreneur by vocation. Currently working on creating digital financial solutions to empower and build local African communities.",
-      "responsibilities": [],
+      "id": "mathias-mutuma",
+      "name": "Mathias Mutuma",
+      "title": "Operations Manager – Agrointernational pty Ltd (Kenya)",
+      "photo": "/assets/WhatsApp-Image-2026-06-17-at-13.45.52.jpeg",
+      "description": "As Operations Manager for Agrointernational pty Ltd  in Kenya, I oversee daily operations, product sourcing, quality control, licensing and certification compliance, and stakeholder engagement. I work closely with farmers, suppliers, and partners to ensure efficient operations and the consistent supply of high-quality agricultural products",
+      "responsibilities": [
+        "Managing day-to-day business operations",
+        "Sourcing agricultural products and developing supplier networks",
+        "Conducting quality control and product inspections",
+        "Coordinating licensing, certifications, and regulatory compliance requirements",
+        "Meeting and working with farmers, cooperatives, and producer groups",
+        "Building relationships with suppliers, customers, and industry stakeholders",
+        "Supporting procurement, logistics, and business development activities"
+      ],
       "expertise": [
-        "Business development and growth strategy",
-        "Brand building and market positioning",
-        "Entrepreneurship and startup development",
-        "Software engineering and technology solutions",
-        "Digital financial services (FinTech)",
-        "Product development and innovation",
-        "Strategic partnerships and stakeholder engagement",
-        "Community empowerment initiatives",
-        "Digital transformation",
-        "Project and operations management",
-        "Market expansion across Africa",
-        "Financial inclusion and economic development"
+        "Operations Management",
+        "Product Sourcing",
+        "Quality Control & Assurance",
+        "Licensing & Certification Compliance",
+        "⁠Farmer & Supplier Relations",
+        "Agricultural Supply Chains",
+        "Procurement & Logistics Coordination",
+        "Business Development & Partnerships"
       ]
     }
   ]
